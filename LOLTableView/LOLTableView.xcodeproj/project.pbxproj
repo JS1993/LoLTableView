@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF2692171CB72FA4005283FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2692161CB72FA4005283FA /* main.m */; };
+		CF26921A1CB72FA4005283FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2692191CB72FA4005283FA /* AppDelegate.m */; };
+		CF26921D1CB72FA4005283FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26921C1CB72FA4005283FA /* ViewController.m */; };
+		CF2692201CB72FA4005283FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF26921E1CB72FA4005283FA /* Main.storyboard */; };
+		CF2692231CB72FA4005283FA /* LOLTableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF2692211CB72FA4005283FA /* LOLTableView.xcdatamodeld */; };
+		CF2692251CB72FA4005283FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2692241CB72FA4005283FA /* Assets.xcassets */; };
+		CF2692281CB72FA4005283FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2692261CB72FA4005283FA /* LaunchScreen.storyboard */; };
+		CF2692331CB72FA4005283FA /* LOLTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2692321CB72FA4005283FA /* LOLTableViewTests.m */; };
+		CF26923E1CB72FA4005283FA /* LOLTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26923D1CB72FA4005283FA /* LOLTableViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF26922F1CB72FA4005283FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF26920A1CB72FA4005283FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF2692111CB72FA4005283FA;
+			remoteInfo = LOLTableView;
+		};
+		CF26923A1CB72FA4005283FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF26920A1CB72FA4005283FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF2692111CB72FA4005283FA;
+			remoteInfo = LOLTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF2692121CB72FA4005283FA /* LOLTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2692161CB72FA4005283FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF2692181CB72FA4005283FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF2692191CB72FA4005283FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF26921B1CB72FA4005283FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF26921C1CB72FA4005283FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF26921F1CB72FA4005283FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF2692221CB72FA4005283FA /* LOLTableView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LOLTableView.xcdatamodel; sourceTree = "<group>"; };
+		CF2692241CB72FA4005283FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF2692271CB72FA4005283FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF2692291CB72FA4005283FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF26922E1CB72FA4005283FA /* LOLTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOLTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF2692321CB72FA4005283FA /* LOLTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLTableViewTests.m; sourceTree = "<group>"; };
+		CF2692341CB72FA4005283FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF2692391CB72FA4005283FA /* LOLTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOLTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF26923D1CB72FA4005283FA /* LOLTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLTableViewUITests.m; sourceTree = "<group>"; };
+		CF26923F1CB72FA4005283FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF26920F1CB72FA4005283FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF26922B1CB72FA4005283FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF2692361CB72FA4005283FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF2692091CB72FA4005283FA = {
+			isa = PBXGroup;
+			children = (
+				CF2692141CB72FA4005283FA /* LOLTableView */,
+				CF2692311CB72FA4005283FA /* LOLTableViewTests */,
+				CF26923C1CB72FA4005283FA /* LOLTableViewUITests */,
+				CF2692131CB72FA4005283FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF2692131CB72FA4005283FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF2692121CB72FA4005283FA /* LOLTableView.app */,
+				CF26922E1CB72FA4005283FA /* LOLTableViewTests.xctest */,
+				CF2692391CB72FA4005283FA /* LOLTableViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF2692141CB72FA4005283FA /* LOLTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CF2692181CB72FA4005283FA /* AppDelegate.h */,
+				CF2692191CB72FA4005283FA /* AppDelegate.m */,
+				CF26921B1CB72FA4005283FA /* ViewController.h */,
+				CF26921C1CB72FA4005283FA /* ViewController.m */,
+				CF26921E1CB72FA4005283FA /* Main.storyboard */,
+				CF2692241CB72FA4005283FA /* Assets.xcassets */,
+				CF2692261CB72FA4005283FA /* LaunchScreen.storyboard */,
+				CF2692291CB72FA4005283FA /* Info.plist */,
+				CF2692211CB72FA4005283FA /* LOLTableView.xcdatamodeld */,
+				CF2692151CB72FA4005283FA /* Supporting Files */,
+			);
+			path = LOLTableView;
+			sourceTree = "<group>";
+		};
+		CF2692151CB72FA4005283FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF2692161CB72FA4005283FA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF2692311CB72FA4005283FA /* LOLTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF2692321CB72FA4005283FA /* LOLTableViewTests.m */,
+				CF2692341CB72FA4005283FA /* Info.plist */,
+			);
+			path = LOLTableViewTests;
+			sourceTree = "<group>";
+		};
+		CF26923C1CB72FA4005283FA /* LOLTableViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF26923D1CB72FA4005283FA /* LOLTableViewUITests.m */,
+				CF26923F1CB72FA4005283FA /* Info.plist */,
+			);
+			path = LOLTableViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF2692111CB72FA4005283FA /* LOLTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF2692421CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableView" */;
+			buildPhases = (
+				CF26920E1CB72FA4005283FA /* Sources */,
+				CF26920F1CB72FA4005283FA /* Frameworks */,
+				CF2692101CB72FA4005283FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LOLTableView;
+			productName = LOLTableView;
+			productReference = CF2692121CB72FA4005283FA /* LOLTableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF26922D1CB72FA4005283FA /* LOLTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF2692451CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableViewTests" */;
+			buildPhases = (
+				CF26922A1CB72FA4005283FA /* Sources */,
+				CF26922B1CB72FA4005283FA /* Frameworks */,
+				CF26922C1CB72FA4005283FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF2692301CB72FA4005283FA /* PBXTargetDependency */,
+			);
+			name = LOLTableViewTests;
+			productName = LOLTableViewTests;
+			productReference = CF26922E1CB72FA4005283FA /* LOLTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF2692381CB72FA4005283FA /* LOLTableViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF2692481CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableViewUITests" */;
+			buildPhases = (
+				CF2692351CB72FA4005283FA /* Sources */,
+				CF2692361CB72FA4005283FA /* Frameworks */,
+				CF2692371CB72FA4005283FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF26923B1CB72FA4005283FA /* PBXTargetDependency */,
+			);
+			name = LOLTableViewUITests;
+			productName = LOLTableViewUITests;
+			productReference = CF2692391CB72FA4005283FA /* LOLTableViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF26920A1CB72FA4005283FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = jiangsu;
+				TargetAttributes = {
+					CF2692111CB72FA4005283FA = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4SU7V64Q9J;
+					};
+					CF26922D1CB72FA4005283FA = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4SU7V64Q9J;
+						TestTargetID = CF2692111CB72FA4005283FA;
+					};
+					CF2692381CB72FA4005283FA = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4SU7V64Q9J;
+						TestTargetID = CF2692111CB72FA4005283FA;
+					};
+				};
+			};
+			buildConfigurationList = CF26920D1CB72FA4005283FA /* Build configuration list for PBXProject "LOLTableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF2692091CB72FA4005283FA;
+			productRefGroup = CF2692131CB72FA4005283FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF2692111CB72FA4005283FA /* LOLTableView */,
+				CF26922D1CB72FA4005283FA /* LOLTableViewTests */,
+				CF2692381CB72FA4005283FA /* LOLTableViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF2692101CB72FA4005283FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2692281CB72FA4005283FA /* LaunchScreen.storyboard in Resources */,
+				CF2692251CB72FA4005283FA /* Assets.xcassets in Resources */,
+				CF2692201CB72FA4005283FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF26922C1CB72FA4005283FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF2692371CB72FA4005283FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF26920E1CB72FA4005283FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF26921D1CB72FA4005283FA /* ViewController.m in Sources */,
+				CF26921A1CB72FA4005283FA /* AppDelegate.m in Sources */,
+				CF2692171CB72FA4005283FA /* main.m in Sources */,
+				CF2692231CB72FA4005283FA /* LOLTableView.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF26922A1CB72FA4005283FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF2692331CB72FA4005283FA /* LOLTableViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF2692351CB72FA4005283FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF26923E1CB72FA4005283FA /* LOLTableViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF2692301CB72FA4005283FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF2692111CB72FA4005283FA /* LOLTableView */;
+			targetProxy = CF26922F1CB72FA4005283FA /* PBXContainerItemProxy */;
+		};
+		CF26923B1CB72FA4005283FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF2692111CB72FA4005283FA /* LOLTableView */;
+			targetProxy = CF26923A1CB72FA4005283FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF26921E1CB72FA4005283FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF26921F1CB72FA4005283FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF2692261CB72FA4005283FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF2692271CB72FA4005283FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF2692401CB72FA4005283FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF2692411CB72FA4005283FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF2692431CB72FA4005283FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LOLTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.LOLTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF2692441CB72FA4005283FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LOLTableView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.LOLTableView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CF2692461CB72FA4005283FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LOLTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.LOLTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOLTableView.app/LOLTableView";
+			};
+			name = Debug;
+		};
+		CF2692471CB72FA4005283FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LOLTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.LOLTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOLTableView.app/LOLTableView";
+			};
+			name = Release;
+		};
+		CF2692491CB72FA4005283FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LOLTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.LOLTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LOLTableView;
+			};
+			name = Debug;
+		};
+		CF26924A1CB72FA4005283FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LOLTableViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangsu.LOLTableViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LOLTableView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF26920D1CB72FA4005283FA /* Build configuration list for PBXProject "LOLTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF2692401CB72FA4005283FA /* Debug */,
+				CF2692411CB72FA4005283FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF2692421CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF2692431CB72FA4005283FA /* Debug */,
+				CF2692441CB72FA4005283FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF2692451CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF2692461CB72FA4005283FA /* Debug */,
+				CF2692471CB72FA4005283FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF2692481CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF2692491CB72FA4005283FA /* Debug */,
+				CF26924A1CB72FA4005283FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF2692211CB72FA4005283FA /* LOLTableView.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF2692221CB72FA4005283FA /* LOLTableView.xcdatamodel */,
+			);
+			currentVersion = CF2692221CB72FA4005283FA /* LOLTableView.xcdatamodel */;
+			path = LOLTableView.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CF26920A1CB72FA4005283FA /* Project object */;
+}
