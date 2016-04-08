@@ -1,0 +1,2424 @@
+<html lang="zh-Hans"><head>
+	<meta charset="utf-8">
+	<meta content="IE=7" http-equiv="X-UA-Compatible">
+	<title>英雄联盟英雄数据库-LOL英雄详细介绍</title>
+	<meta name="Description" content="">
+	<meta name="Keywords" content="">
+	<script src="http://www.duowan.com/assets/js/jquery.js"></script><script src="http://www.duowan.com/public/assets/sys/js/jquery-1.7.2.min.js"></script>
+	<script src="/s/v2/dww.js"></script>
+    <script src="/s/js/herolist_filter.js" type="text/javascript"></script>
+    <script src="/s/js/filter.js" type="text/javascript"></script>
+    <script src="/s/js/effect.js" type="text/javascript"></script>
+    <script src="/s/js/champions_index.js" type="text/javascript"></script>
+    <link href="/s/v2/global.css?14030712" rel="stylesheet">
+    <style>
+        #data-main .hero-list{margin-top:30px;}
+    </style>
+<base target="_blank">
+<style>#dw-topbar .dw-topbar-logo,#dw-topbar .dw-topbar-homepage,#dw-topbar .dw-topbar-nav,#dw-topbar .dw-topbar-login,#dw-topbar .dw-topbar-register,#dw-topbar .dw-topbar-username,#dw-topbar .dw-topbar-yuanbao,#dw-topbar .dw-topbar-task,#dw-topbar .dw-topbar-logout,#dw-topbar .dw-topbar-download{float:left;_display:inline}#dw-topbar .dw-topbar-userinfo{float:right;_display:inline}html body{padding-top:36px;_padding-top:0}#dw-topbar{color:#333;width:100%;min-width:1000px;position:fixed;top:0;left:0;_position:relative;z-index:20000;height:36px;background:#e8e8e8 url(http://assets.dwstatic.com/project/topbar/img/bg_topbar.png) repeat-x 0 0}#dw-topbar *{margin:0;padding:0;font-style:normal;border:0 none;text-decoration:none;list-style-type:none;background:none;width:auto;font:12px/1.5 tahoma, "Microsoft YaHei"}#dw-topbar a{color:#333}#dw-topbar a:hover{text-decoration:underline}#dw-topbar .dw-topbar-bd{width:1000px;margin:auto;height:35px;position:relative;*zoom:1}#dw-topbar .dw-topbar-bd:before,#dw-topbar .dw-topbar-bd:after{content:"";display:table;line-height:0}#dw-topbar .dw-topbar-bd:after{clear:both}#dw-topbar .dw-topbar-logo,#dw-topbar .dw-topbar-homepage,#dw-topbar .dw-topbar-nav,#dw-topbar .dw-topbar-login,#dw-topbar .dw-topbar-register,#dw-topbar .dw-topbar-username,#dw-topbar .dw-topbar-yuanbao,#dw-topbar .dw-topbar-task,#dw-topbar .dw-topbar-logout,#dw-topbar .dw-topbar-download{height:36px;line-height:36px}#dw-topbar .dw-topbar-login,#dw-topbar .dw-topbar-register,#dw-topbar .dw-topbar-username,#dw-topbar .dw-topbar-yuanbao,#dw-topbar .dw-topbar-task,#dw-topbar .dw-topbar-logout{margin-right:10px}#dw-topbar .dw-topbar-register{margin-right:0}#dw-topbar .dw-topbar-username{margin-right:20px}#dw-topbar .dw-topbar-yuanbao{margin-right:6px}#dw-topbar .dw-topbar-logout{display:none}#dw-topbar .dw-topbar-nav-bd,#dw-topbar .dw-topbar-task-bd{display:none}#dw-topbar .dw-topbar-logo{width:100px;height:25px;margin-top:5px;margin-right:30px;background:url(http://assets.dwstatic.com/project/topbar/img/logo.png) no-repeat 0 0;text-indent:100%;white-space:nowrap;overflow:hidden}#dw-topbar .dw-topbar-homepage{margin-right:10px;vertical-align:middle}#dw-topbar .dw-topbar-homepage:hover{color:#e50450}#dw-topbar .dw-topbar-nav{width:78px;position:relative}#dw-topbar .dw-topbar-nav .dw-topbar-title{display:block;width:65px;height:36px;line-height:36px;padding:0 1px 0 12px;position:relative;z-index:100;cursor:pointer;margin:0 !important}#dw-topbar .dw-topbar-nav .dw-topbar-title i{display:block;width:7px;height:4px;overflow:hidden;background:url(http://assets.dwstatic.com/project/topbar/img/icon_arrow.png) no-repeat 0 0;position:absolute;left:63px;top:17px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd{position:absolute;z-index:99;left:0;top:35px;border:1px solid #bababa;background-color:#FFF}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd table{width:100%}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd td{vertical-align:top}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd div{border-right:1px solid #EEE;padding:8px 14px}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd div.last-child{border-right:0 none}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd h3{height:24px;line-height:24px;font-weight:700;white-space:nowrap;color:#336596}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd a{height:24px;line-height:24px;display:block;overflow:hidden;white-space:nowrap}#dw-topbar .dw-topbar-nav .dw-topbar-nav-bd a:hover{color:#e20451;text-decoration:underline}#dw-topbar .dw-topbar-nav.dw-topbar-hover .dw-topbar-title{padding:0 0 0 11px;background-color:#FFF;border-left:1px solid #bababa;border-right:1px solid #bababa}#dw-topbar .dw-topbar-nav.dw-topbar-hover .dw-topbar-title i{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);filter:progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=-1.2246063538223773e-16, M21=1.2246063538223773e-16, M22=-1, sizingMethod="auto expand");zoom:1}#dw-topbar .dw-topbar-nav.dw-topbar-hover .dw-topbar-nav-bd{display:block}#dw-topbar .dw-topbar-userinfo form{float:left}#dw-topbar .dw-topbar-userinfo .dw-topbar-login{width:58px;height:20px;line-height:20px;text-align:center;margin-top:7px;border:1px solid #c1dd99;color:#66aa00;background-color:#f0f9ea}#dw-topbar .dw-topbar-userinfo .dw-topbar-login:hover{background-color:#f8fff3;text-decoration:none}#dw-topbar .dw-topbar-userinfo .dw-topbar-username{display:none;font-weight:700;color:#e50452}#dw-topbar .dw-topbar-userinfo .dw-topbar-username img{width:24px;height:24px;float:left;margin-right:5px;margin-top:6px}#dw-topbar .dw-topbar-userinfo .dw-topbar-username:hover{text-decoration:none;cursor:default}#dw-topbar .dw-topbar-userinfo .dw-topbar-nickname:hover{text-decoration:underline;cursor:pointer}#dw-topbar .dw-topbar-userinfo .dw-topbar-yuanbao{display:none}#dw-topbar .dw-topbar-userinfo .dw-topbar-yuanbao i{font-weight:700;color:#ff6600}#dw-topbar .dw-topbar-userinfo .dw-topbar-yuanbao:hover{color:#e50450}#dw-topbar .dw-topbar-userinfo .dw-topbar-yuanbao:hover i{color:#e50450}#dw-topbar .dw-topbar-userinfo .dw-topbar-download{width:68px;height:22px;overflow:hidden;line-height:22px;padding-left:32px;margin-top:6px;background:url(http://assets.dwstatic.com/project/topbar/img/bg_yy.png) no-repeat 0 0;color:#254a77}#dw-topbar .dw-topbar-userinfo .dw-topbar-download:hover{text-decoration:none;background-position:0 -22px;color:#936622}#dw-topbar .dw-topbar-userinfo .dw-topbar-task{width:78px;position:relative}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .dw-topbar-title{display:block;width:65px;height:36px;line-height:36px;padding:0 1px 0 12px;position:relative;z-index:100;cursor:pointer;margin:0 !important}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .dw-topbar-title i{display:block;width:7px;height:4px;overflow:hidden;background:url(http://assets.dwstatic.com/project/topbar/img/icon_arrow.png) no-repeat 0 0;position:absolute;left:63px;top:17px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;transition:all 0.3s linear}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .dw-topbar-title b{display:line-block;height:12px;padding:0 3px;line-height:12px;background-color:#e50452;color:#fff;font-size:10px;position:absolute;top:2px;left:56px;-webkit-text-size-adjust:none;-webkit-border-radius:2px;border-radius:2px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .dw-topbar-task-bd{width:388px;position:absolute;top:35px;right:0;border:1px solid #bababa;z-index:99}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .dw-topbar-task-bd a:hover{color:#e20451 !important}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress{background:#FFF;width:100%;line-height:1.5}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress a{float:none;line-height:inherit;margin:auto}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-hd{height:36px;line-height:36px;overflow:hidden;border-bottom:1px solid #eee}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-hd .t{float:left;color:#aaa;padding:0 7px 0 10px;line-height:36px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-hd .progress-bar{float:left;width:220px;overflow:hidden;background:#cacaca;margin:12px 0 0}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-hd .progress-bar span{width:0px;background:#F90;height:13px;display:block}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-hd .result{color:#7f7f7f;margin:0 0 0 8px;float:left;line-height:36px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-ft{padding:5px 0 5px 15px;border-top:1px solid #EEE}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-ft h3 a{float:right;_display:inline;font-weight:400;color:#32659c;margin-right:10px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-ft .links{padding:5px 0}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress-ft .links a{display:inline-block;margin-right:10px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .mod-art{padding:8px 12px 4px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .mod-art .num{float:right;padding:0 0 0 15px;color:#333}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .mod-art .num span{background:#7f7f7f;color:#fff;line-height:18px;width:40px;text-align:center;display:inline-block;vertical-align:top;margin:3px 0 0 10px;*display:inline;zoom:1;*vertical-align:middle}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .mod-art .num .a{background:#f60}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .mod-art .num .s{background:#cacaca}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .mod-art li{background-position:-180px -271px;padding:0 0 0 8px;height:24px;line-height:24px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task .progress .pop-gold{background:#ffe;border:5px solid #f6deae;color:#894a00;width:90px;height:40px;font-size:18px;line-height:40px;position:absolute;top:50%;left:50%;margin:-25px 0 0 -50px;z-index:1000;text-align:center;font-family:"Microsoft YaHei", "SimHei"}#dw-topbar .dw-topbar-userinfo .dw-topbar-task.dw-topbar-hover .dw-topbar-title{padding:0 0 0 11px;background-color:#FFF;border-left:1px solid #bababa;border-right:1px solid #bababa}#dw-topbar .dw-topbar-userinfo .dw-topbar-task.dw-topbar-hover .dw-topbar-title i{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);filter:progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=-1.2246063538223773e-16, M21=1.2246063538223773e-16, M22=-1, sizingMethod="auto expand");zoom:1}#dw-topbar .dw-topbar-userinfo .dw-topbar-task.dw-topbar-hover .dw-topbar-title b{left:55px}#dw-topbar .dw-topbar-userinfo .dw-topbar-task.dw-topbar-hover .dw-topbar-task-bd{display:block}</style><script src="http://img1.yxtq.yy.com/duowan/js/yxtq_duowan.js"></script><link href="http://res.udb.duowan.com/css/oauth/udbsdk/proxy/udbsdkproxy.min.css" rel="stylesheet" type="text/css"><script type="text/javascript" charset="utf-8" load="delay" async="" src="http://wen.duowan.com:4321/webyy-server/service"></script><script type="text/javascript" charset="utf-8" load="delay" async="" src="http://122.13.200.93:2005/webyy-server/gateway?_=1395364558813"></script><script type="text/javascript" charset="utf-8" load="delay" async="" src="http://115.238.171.208/gem-client/ui/livetip/host-page.html.box.js?"></script><script type="text/javascript" charset="utf-8" load="delay" async="" src="http://115.238.171.208/gem-client/ui/livetip/host-page.html.js"></script><link type="text/css" rel="stylesheet" href="http://assets.dwstatic.com/project/popupbox/css/sitepopupbox.css"></head>
+<body>
+<div style="position: fixed; top: 0px; left: 0px; border: medium none; background: none repeat scroll 0% 0% Transparent; z-index: 123456789;"><object width="1" height="1" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="GEM__Flash_Object"><param value="http://115.238.171.208/gem-client/jsbox/flash/connector.swf" name="movie"><param value="transparent" name="wmode"><param value="low" name="quality"><param value="false" name="menu"><param value="always" name="allowScriptAccess"><embed width="1" height="1" allowscriptaccess="always" menu="false" quality="low" wmode="transparent" src="http://115.238.171.208/gem-client/jsbox/flash/connector.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="GEM__Flash_Object"></object></div><div id="dw-topbar"><div class="dw-topbar-bd"><a class="dw-topbar-logo" href="http://www.duowan.com"><strong>多玩游戏网</strong></a><a class="dw-topbar-homepage" href="http://www.duowan.com">首页</a><div class="dw-topbar-nav"><em class="dw-topbar-title">全站导航<i></i></em><div class="dw-topbar-nav-bd"></div></div><div class="dw-topbar-userinfo"><form target="_self" method="post" action="https://udb.duowan.com/login.jsp"><a class="dw-topbar-login" href="#">安全登录</a><a class="dw-topbar-register" href="https://udb.duowan.com/register.do">新用户注册</a></form><a target="_self" class="dw-topbar-username" href="javascript:void(0)"></a><a class="dw-topbar-yuanbao" href="http://pai.duowan.com/?r=user/index">元宝：<i id="pay_yb">0</i></a><div class="dw-topbar-task" style="display: block;"><em class="dw-topbar-title">每日任务<b style="" id="_task_num">1</b><i></i></em><div class="dw-topbar-task-bd"><div class="progress _progress"><div class="progress-hd"><span class="t">每日进度</span><span class="progress-bar"><span style="width: 33%;"></span></span><span class="result">33%</span></div><div class="progress-bd"><ul id="_task_list" class="mod-art"><li> 	<span class="num">	 <em class="_num">1/1</em><span class="_desc a" _id="signin" style="cursor: pointer;">领取</span> 	</span> 	<span title="" class="_title">[双倍奖励]小手一抖，今日签到元宝拿走</span></li><li> 	<span class="num">	 <em class="_num">0/3</em><span class="_desc a" _id="scannews" style="cursor: pointer;">去完成</span> 	</span> 	<span title="" class="_title">[双倍奖励]浏览多玩首页新闻领元宝</span></li><li> 	<span class="num">	 <em class="_num">0/1</em><span class="_desc" _id="comment" style="cursor: default;">未完成</span> 	</span> 	<span title="" class="_title">登陆并评论多玩新闻领元宝</span></li><li> 	<span class="num">	 <em class="_num">0/3</em><span class="_desc" _id="signin2" style="cursor: default;">未完成</span> 	</span> 	<span title="" class="_title">连续3天签到领额外1元宝</span></li></ul></div><div class="progress-ft"><h3><a target="_blank" href="http://bbs.duowan.com/thread-31074871-1-1.html">元宝是什么？</a>元宝抢购</h3><div id="_goods_list" class="links"><a target="_blank" href="http://www.duowan.com/#pai">1.《新流星搜剑录》高级激活码 </a><a target="_blank" href="http://www.duowan.com/#pai">2.《黑金》321测试黑丝至尊礼包</a><a target="_blank" href="http://www.duowan.com/#pai">3.3天YY年费会员体验资格</a></div></div><div style="display:none" id="_get_money_success" class="pop-gold">元宝+1</div></div></div></div><a class="dw-topbar-logout" href="#">退出</a><a class="dw-topbar-download" href="http://www.yy.com/s/download.html">YY语音下载</a></div></div></div>
+<!-- 全站导航{ -->
+<script charset="utf-8" src="http://www.duowan.com/assets/js/duowanSiteNav.js"></script>
+<style type="text/css">
+/*champions*/
+#champion_list{margin:0 auto;overflow:hidden;padding:20px 0 0;width:644px;}
+#champion_list li{color:#0080b9;float:left;height:110px;text-align:center;width:92px;}
+#champion_list .lol_champion{}#champion_list .lol_champion:hover img{border:1px solid #000000;background:#007ab1;}
+#champion_list .lol_champion img{width:78px;height:78px;padding:1px;background:#006699;border:1px solid #000000;}
+#champion_list .champion_name{height:22px;line-height:22px;}
+#champion_list .champion_search_text{display:none;}
+.tooltip {display: none;}
+.champion_tooltip {position: absolute;top: 50px;left: 50%;border:1px solid #007ab1;color:#addbef;width: 283px;height: 168px;line-height:22px;padding: 20px;z-index: 100;text-align: left;background:#000000 url(images/tipsbg.jpg) left top no-repeat; -moz-box-shadow: 0 0 15px #000; -webkit-box-shadow: 0 0 15px #000; -webkit-transition: all 0.1s ease-out;}
+.champion_tooltip h2{font-size:14px;font-weight:bold;}
+.champion_tooltip p {clear: left;}
+.champion_tooltip img {float: left;margin-right: 5px;margin-bottom: 5px;background:#000000;border:1px solid #007ab1;height:60px;width:60px;}
+.champion_tooltip_footer {position:relative;}
+.champion_tooltip_tags {color: #e0a119;font-family:Tahoma;font-size: 12px;line-height:20px;}
+</style>
+<!-- }全站导航 -->
+<div id="topHeziAd" class="top-hezi-ad"><div class="top-hezi-ad-bd"><a title="多玩LOL盒子官网" class="top-hezi-index" href="http://lol.duowan.com/hezi/m/"></a><a title="IOS版下载" class="top-hezi-ios" "="" href="https://itunes.apple.com/us/app/duo-wan-he-zifor-ying-xiong/id698076980?ls=1&amp;mt=8"></a><a title="Android版下载" class="top-hezi-android" "="" href="http://lolbox.duowan.com/phone/upgrade/lolbox.apk"></a><a title="多玩LOL盒子官网" class="top-hezi-qrcode" href="http://lol.duowan.com/hezi/m/"></a></div></div><div id="doc">
+<script src="http://www.duowan.com/public/assets/sys/js/dww3.min.js"></script>
+<link href="http://www.duowan.com/assets/css/dwzq-common.css" rel="stylesheet">
+<style>
+/* 专区顶部入口 */
+#game-entrance{width:82px;height:29px;position:absolute;top:160px;right:50px;color:#333}
+#game-entrance .btn-live{display:block;width:82px;height:29px;background:url(/public/assets/app/game-entrance/bgs_live.png) no-repeat 0 0;_background-image:url(/public/assets/app/game-entrance/bgs_live_8.png);overflow:hidden;line-height:10;}
+#game-entrance .btn-live:hover {background-position:-82px 0;}
+#game-entrance .game-info{height:55px;position:absolute;top:-62px;right:0;padding-left:6px;background:url(/public/assets/app/game-entrance/bg_live_box.png) no-repeat 0 0;_background-image:url(/public/assets/app/game-entrance/bg_live_box_8.png);}
+#game-entrance .game-info .bd{float:right;height:55px;background:url(/public/assets/app/game-entrance/bg_live_box.png) no-repeat 100% -55px;_background-image:url(/public/assets/app/game-entrance/bg_live_box_8.png);}
+#game-entrance .game-info .game-data-name{padding:0 0 0 8px;white-space:nowrap;height:55px;}
+#game-entrance .game-info .game-data-rank{padding:0 8px 0 4px;white-space:nowrap;height:55px;background:url(/public/assets/app/game-entrance/bgs_live_8.png) no-repeat 100% 3px;}
+#game-entrance .game-info .game-data-name strong{display:block;font-size:14px;height:28px;line-height:34px;*line-height:38px;_line-height:36px;overflow:hidden;padding-right:30px;}
+#game-entrance .game-info .game-data-name p{line-height:20px;color:#777;padding-right:30px;}
+#game-entrance .game-info .game-data-name p i{color:#F00;}
+#game-entrance .game-info .game-data-name .up,
+#game-entrance .game-info .game-data-name .down{display:block;width:21px;height:21px;overflow:hidden;position:absolute;top:7px;right:7px;background:url(/public/assets/app/game-entrance/bgs_live.png) no-repeat -164px 0;}
+#game-entrance .game-info .game-data-name .down{background-position:-185px 0;}
+#game-entrance .game-info .game-data-rank b{font:italic 30px/55px georgia;color:#F00;}
+#game-entrance .game-info .arrow{display:block;width:17px;height:11px;background:url(/public/assets/app/game-entrance/bg_live_box.png) no-repeat -6px -3px;_background-image:url(/public/assets/app/game-entrance/bg_live_box_8.png);position:absolute;bottom:-7px;_bottom:-11px;right:58px;}
+</style>
+	<div class="nav">
+		<!-- 主导航{ -->
+<link rel="stylesheet" type="text/css" href="http://lol.duowan.com/s/daojutip/daojuTip.css">
+<style type="text/css">
+&lt;!--
+.STYLE1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+--&gt;
+
+</style>
+
+			<!-- }主导航 -->
+			<!-- 子导航{ -->
+			<!-- }子导航 -->
+		<a class="btn-forum" href="http://bbs.duowan.com/forum-1345-1.html">进入论坛</a>
+	</div>
+	<!-- }LOGO -->
+    <!-- 游戏特权{ -->
+    <div id="J_gamePrivilege"></div>
+    <style>
+    #J_gamePrivilege{width: 130px;height: 130px;overflow: hidden;position: absolute;top:74px;right: 25px;}
+	</style>
+	<script src="http://img1.yxtq.yy.com/duowan/js/yxtq_ad.js"></script>
+   <!-- }游戏特权 -->
+<div id="heziADTrigger" class="top-hezi-ad-trigger"><embed width="100%" height="100%" border="0" wmode="transparent" src="http://lol.duowan.com/s/v2/topHeziAd.swf"><a href="javascript:void(0);"></a><img src="http://lol.duowan.com/s/v2/top-hezi-ad-trigger_bg.png"></div></div>
+<style>
+/*
+  基本
+*/
+html{background:#10151d;}
+body{min-width:1000px;font:12px/1.5 tahoma,sans-serif;color:#333;background:url(http://img.dwstatic.com/lol/1305/232372061853/1368416916076.jpg) no-repeat 50% 36px;}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:underline;}
+/*
+  头部元素：背景，颜色，定位
+*/
+#body_bg{ background:none;}
+#main_area{background:url(/s/v1101/dwzq_menu2.jpg) no-repeat; padding-top:10px; height:auto;}
+.main_r{ margin:5px 0 0 5px;}
+.main_r_top{ background:url(/s/v1101/main_r_top.jpg) no-repeat;}
+#dwzq-header{background:url(http://img.dwstatic.com/lol/1305/232372061853/1368416923269.jpg) no-repeat;}
+#dwzq-header .mainnav a{background:url(/s/v1203/bgs_head.png) no-repeat 0 -20px;color:#e1e7eb;}
+#dwzq-header .subnav{color:#81a5b7;}
+#dwzq-header .subnav b{color:#ffe7c3;}
+#dwzq-header .subnav a{color:#81a5b7;}
+#dwzq-header .links a,#dwzq-header .links span{color:#addbef; font-weight:700;}
+#dwzq-header .mod-search label{color:#addbef;}
+#dwzq-header .mod-search input{background-color:#b4c0c9;border:1px solid #000;color:#081526;}
+#dwzq-header .mod-search a.btn-submit{text-indent:20px;background:url(/s/v1203/bgs_head.png) no-repeat 0 0;color:#addbef;}
+#rolling-news b{color:#addbef;}
+#rolling-news .mod-art{}
+#rolling-news li a{color:#FFF;}
+#game-logo{top:10px;left:40px;}
+
+/*
+  页脚元素：背景，颜色，定位
+*/
+#dwzq-footer{background:#081526 url(/s/v1101/bg_foot_repeat.png) repeat-x 0 0;}
+#dwzq-footer .mod-search{background:url(/s/v1101/bg_foot_search.png) no-repeat;}
+#dwzq-footer .mod-search a.btn-submit{color:#230c0c;}
+#dwzq-footer .mod-search a.back-to-top{color:#addbef;}
+#dwzq-footer .game-map li{border-color:#0d2537;}
+#dwzq-footer .game-map li b{color:#addbef;}
+#dwzq-footer .game-map li a{color:#80a6b8;}
+#dwzq-footer .game-map .clearfix{ height:auto; font-size:12px; overflow:visible;}
+#dwzq-footer .friend-link{background-color:#0b1f31;}
+#dwzq-footer .bd{color:#81a5b7;}
+#dwzq-footer .friend-link b{color:#addbef;}
+#dwzq-footer .friend-link a{color:#80a6b8;}
+#footer{color:#476675;}
+#footer a:link,#footer a:visited { color: #476675; text-decoration: none; }
+#footer a:hover { color: #476675; text-decoration: underline; }
+
+
+
+/*
+  覆盖旧版
+*/
+#hero-recommend{margin-top:0;}
+#footer{padding:20px 0!important;}
+.game-map ul.clearfix{height:auto !important; font-size:12px;line-height:1.5;visibility:visible;}
+.extra .mod-pic-bd .art{overflow:hidden;}
+</style>
+<script src="http://lol.duowan.com/s/v2/topHeziAd.js?20140127"></script>
+
+	<div id="lol-data">
+		<!-- 面包屑导航{ -->
+		<div class="mod-crumbs">
+			<div class="mod-crumbs-bd">
+				<b>您的当前位置：</b><a href="http://www.duowan.com/">多玩首页</a><span>&gt;</span><a href="http://lol.duowan.com/">英雄联盟</a><span>&gt;</span>英雄数据库			</div>
+		</div>
+		<!-- }面包屑导航 -->	
+		<div id="data-aside">
+			<h3><a href="heroes.html">英雄专题资料</a></h3>
+			<div class="filtersbox" id="hero_filters">
+	<label><input type="checkbox" value="melee_tag" class="filter">近战-Warriar</label>		
+        <label><input type="checkbox" value="range_tag" class="filter">远程-Range</label>
+        <label><input type="checkbox" value="physical_tag" class="filter">物理-physical</label>
+	<label><input type="checkbox" value="tank_tag" class="filter">坦克-Tank</label>
+	<label><input type="checkbox" value="mage_tag" class="filter">法系-Mage</label>
+	<label><input type="checkbox" value="support_tag" class="filter">辅助-Support</label>
+        <label><input type="checkbox" value="jungle_tag" class="filter">打野-Jungle</label>
+        <label><input type="checkbox" value="charge_tag" class="filter">突进-Charge</label>        
+	<label><input type="checkbox" value="boy_tag" class="filter">男性-Boy</label>
+	<label><input type="checkbox" value="girl_tag" class="filter">女性-Girl</label>
+	<label><input type="checkbox" id="show_all_filter" checked="checked">全部-Show All </label>
+			</div> 
+			<h3><a href="http://lol.duowan.com/s/items.html">道具资料</a></h3>
+			<h3><a href="http://lol.duowan.com/s/runes.html">符文系统</a></h3>
+			<h3><a href="http://lol.duowan.com/s/spells.html">召唤师系统</a></h3>
+			<h3><a href="http://lol.duowan.com/s/s3tf/">天赋树系统</a></h3>
+		</div>
+		<div style="" id="data-main">			<!-- 英雄专题列表{ -->
+			<div class="hero-list">
+				<div class="mod-pic">
+					<div class="mod-pic-hd">
+						<h3>英雄专题列表</h3>
+					</div>
+					<div class="mod-pic-bd">
+					<ul id="champion_list">
+<li class="boy_tag physical_tag melee_tag jungle_tag charge_tag" style="top: 0px; left: 0px;">
+  <a class="lol_champion" href="http://lol.duowan.com/yasuo/">
+  <img src="http://img.dwstatic.com/lol/1311/249491473153/1385536285032.png" class="champion_icon"></a>
+  <div class="champion_name">亚索</div>
+									
+						<span class="champion_search_text">疾风剑豪·亚索</span>
+                        </li>
+       
+
+
+<li class="girl_tag  physical_tag  range_tag " style="top: 0px; left: 92px;">
+
+<a class="lol_champion" href=" http://lol.duowan.com/jinx/">
+<img src="http://img.dwstatic.com/lol/1310/245353650426/1381398467886.png" class="champion_icon"></a>
+<div class="champion_name">金克丝</div>
+
+
+			
+<span class="champion_search_text">暴走萝莉金克丝</span>
+</li>
+
+
+<li class="boy_tag  physical_tag  range_tag charge_tag" style="top: 0px; left: 184px;">
+
+<a class="lol_champion" href=" http://lol.duowan.com/lucian/"><img src=" http://img.dwstatic.com/lol/1308/240574668479/1376619482925.png" class="champion_icon"></a>
+<div class="champion_name">卢锡安</div>
+			
+<span class="champion_search_text">圣枪游侠卢锡安</span>
+</li>
+
+
+
+<li class="boy_tag physical_tag melee_tag jungle_tag charge_tag" style="top: 0px; left: 276px;">
+
+ <a class="lol_champion" href="http://lol.duowan.com/aatrox/">
+
+ <img src="http://img.dwstatic.com/lol/1306/235048838354/1371093644361.png" class="champion_icon"></a>
+
+						<div class="champion_name">亚托克斯</div>
+
+									
+						<span class="champion_search_text">暗裔剑魔·亚托克斯</span>
+                        </li>
+<li class="girl_tag  range_tag mage_tag  charge_tag" style="top: 0px; left: 368px;">
+<a class="lol_champion" href="http://lol.duowan.com/lissandra/"><img src="http://img.dwstatic.com/lol/1305/231871544650/231871561051.png" class="champion_icon"></a>
+
+						<div class="champion_name">丽桑卓</div>						
+									
+						<span class="champion_search_text">冰霜女巫·丽桑卓</span>
+                        </li>
+
+
+
+<li class="boy_tag  mage_tag jungle_tag charge_tag" style="top: 0px; left: 460px;">
+<a class="lol_champion" href="http://lol.duowan.com/zac/">
+
+<img src="http://img5.dwstatic.com/lol/1303/228242985967/228242993255.png" class="champion_icon"></a>
+
+						<div class="champion_name">扎克</div>
+									
+						<span class="champion_search_text">生化魔人扎克</span>
+                        </li>
+       
+
+
+ <li class="girl_tag physical_tag  charge_tag" style="top: 0px; left: 552px;">
+
+ <a class="lol_champion" href="http://lol.duowan.com/quinn/">
+
+ <img src="http://img3.dwstatic.com/lol/1302/225381420352/225382419902.png" class="champion_icon"></a>
+
+						<div class="champion_name">奎因</div>
+
+									
+						<span class="champion_search_text">德玛西亚之翼·奎因</span>
+                        </li>
+       
+
+
+ <li class="boy_tag mage_tag range_tag support_tag" style="top: 110px; left: 0px;">
+
+ <a class="lol_champion" href="http://lol.duowan.com/thresh/">
+
+ <img src="http://img.dwstatic.com/lol/1301/222714364061/222714396868.png" class="champion_icon"></a>
+
+
+ <div class="champion_name">锤石</div>
+						
+				
+
+			<span class="champion_search_text">魂锁典狱长·锤石</span>
+
+                        </li>
+                        
+<li class="girl_tag physical_tag melee_tag jungle_tag charge_tag" style="top: 110px; left: 92px;">
+
+ <a class="lol_champion" href="http://lol.duowan.com/vi/">
+
+ <img src="http://pic2.duowan.com/lol/1212/219251307713/219251317038.png" class="champion_icon"></a>
+
+						<div class="champion_name">蔚</div>
+
+									
+						<span class="champion_search_text">皮城执法官·蔚</span>
+                        </li>
+       
+
+
+ <li class="girl_tag mage_tag range_tag support_tag" style="top: 110px; left: 184px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/nami/">
+
+<img src="http://pic.duowan.com/lol/1211/218041518261/218041566099.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">娜美</div>
+									
+						<span class="champion_search_text">唤潮鲛姬·娜美</span>
+                        </li>
+                   
+
+
+ <li class="boy_tag physical_tag melee_tag jungle_tag charge_tag" style="top: 110px; left: 276px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/zed/">
+
+<img src="http://pic4.duowan.com/lol/1211/216813960863/216813987373.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">劫</div>
+									
+						<span class="champion_search_text">影流之主·劫</span>
+                        </li>
+       
+
+
+
+ <li class="girl_tag  range_tag mage_tag jungle_tag charge_tag" style="top: 110px; left: 368px;">
+<a class="lol_champion" href="http://lol.duowan.com/elise/">
+
+<img src="http://pic5.duowan.com/lol/1210/215627370104/215627419666.png" class="champion_icon"></a>
+
+						<div class="champion_name">伊莉丝</div>
+									
+						<span class="champion_search_text">蜘蛛女皇伊莉丝</span>
+                        </li>
+       
+
+<li class="boy_tag physical_tag melee_tag jungle_tag charge_tag" style="top: 110px; left: 460px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/khazix/">
+
+<img src="http://pic3.duowan.com/lol/1209/212665448739/212665677660.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">卡'兹克</div>
+									
+						<span class="champion_search_text">虚空掠夺者 卡'兹克</span>
+                        </li>
+       
+
+
+
+ <li class="girl_tag  mage_tag range_tag " style="top: 110px; left: 552px;">
+<a class="lol_champion" href="http://lol.duowan.com/syndra/">
+
+<img src="http://pic3.duowan.com/lol/1208/210247342385/210247356941.png" class="champion_icon"></a>
+
+						<div class="champion_name">辛德拉</div>
+									
+						<span class="champion_search_text">暗黑元首·辛德拉</span>
+                        </li>
+       
+
+ <li class="boy_tag  melee_tag jungle_tag charge_tag" style="top: 220px; left: 0px;">
+<a class="lol_champion" href="http://lol.duowan.com/rengar/">
+
+<img src="http://pic5.duowan.com/lol/1208/209057869812/209057893970.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">雷恩加尔</div>
+									
+						<span class="champion_search_text">傲之追猎者·雷恩加尔</span>
+                        </li>
+       
+
+
+
+ <li class="girl_tag  mage_tag melee_tag jungle_tag charge_tag" style="top: 220px; left: 92px;">
+<a class="lol_champion" href="http://lol.duowan.com/diana/">
+
+<img src="http://pic.duowan.com/lol/1208/207845244716/207847215830.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">黛安娜</div>
+									
+						<span class="champion_search_text">皎月女神·戴安娜</span>
+                        </li>
+       
+
+
+
+
+             <li class="girl_tag  range_tag mage_tag" style="top: 220px; left: 184px;">
+	
+<a class="lol_champion" href="http://lol.duowan.com/zyra/">
+<img src="http://pic.duowan.com/lol/1207/207224467449/207225320108.png" class="champion_icon"></a>
+
+						<div class="champion_name">婕拉</div>
+									
+						<span class="champion_search_text">荆棘之兴·婕拉</span>
+                        </li>
+
+      
+          <li class="boy_tag jungle_tag  physical_tag melee_tag range_tag charge_tag" style="top: 220px; left: 276px;">
+
+<a class="lol_champion" href=" http://lol.duowan.com/jayce/"><img src=" http://pic.duowan.com/lol/1207/205773506081/205773517075.png" class="champion_icon"></a>
+<div class="champion_name">杰斯</div>
+			
+<span class="champion_search_text">未来守护者杰斯</span>
+</li>
+<li class="boy_tag physical_tag range_tag" style="top: 220px; left: 368px;">
+<a class="lol_champion" href=" http://lol.duowan.com/draven/"><img src=" http://pic2.duowan.com/lol/1206/202484172754/202487208149.png" class="champion_icon"></a>
+<div class="champion_name">德莱文</div>
+
+			
+<span class="champion_search_text">荣耀行刑官德莱文</span>
+</li>
+
+
+
+
+
+	<li class="boy_tag jungle_tag melee_tag  physical_tag" style="top: 220px; left: 460px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/darius/">
+<img src="http://pic.duowan.com/lol/1203/196184525178/201804651313.jpg" class="champion_icon"></a>
+
+<div class="champion_name">德莱厄斯</div>
+			
+<span class="champion_search_text">诺克萨斯之手-德莱厄斯</span></li>
+
+
+
+
+             <li class="boy_tag jungle_tag melee_tag charge_tag tank_tag  physical_tag mage_tag" style="top: 220px; left: 552px;">
+	
+<a class="lol_champion" href="http://lol.duowan.com/hecarim/">
+<img src="http://pic.duowan.com/lol/1204/197906703906/197908560081.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">赫卡里姆</div>
+									
+						<span class="champion_search_text">战争之影·赫卡里姆</span>
+                        </li>
+       
+          
+
+
+	<li class="boy_tag  mage_tag  physical_tag  range_tag" style="top: 330px; left: 0px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/varus/">
+<img src="http://pic3.duowan.com/lol/1204/198079462173/198079477246.jpg" class="champion_icon"></a>
+
+<div class="champion_name">韦鲁斯</div>
+			
+<span class="champion_search_text">惩戒之箭-韦鲁斯</span></li>
+
+
+
+	<li class="girl_tag  mage_tag  range_tag support_tag range_tag" style="top: 330px; left: 92px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/lulu/">
+<img src="http://pic4.duowan.com/lol/1203/196696818878/196703018435.png" class="champion_icon"></a>
+
+<div class="champion_name">璐璐</div>
+			
+<span class="champion_search_text">仙灵女巫-璐璐</span></li>
+
+
+
+
+	<li class="girl_tag  melee_tag physical_tag jungle_tag charge_tag charge_tag" style="top: 330px; left: 184px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/fiora/">
+<img src="http://pic.duowan.com/lol/1203/195754588847/195755907116.png" class="champion_icon"></a>
+
+<div class="champion_name">菲奥娜</div>
+			
+<span class="champion_search_text">无双剑姬-菲奥娜</span></li>
+
+
+
+		
+					<li class="boy_tag mage_tag charge_tag jungle_tag tank_tag melee_tag" style="top: 330px; left: 276px;">
+						<a class="lol_champion" href="http://lol.duowan.com/nautilus/"><img src="http://pic4.duowan.com/lol/1202/193328146015/193333009937.gif" class="champion_icon"></a>
+						<div class="champion_name">诺提勒斯</div>
+
+									
+						<span class="champion_search_text">深海泰坦 诺提勒斯</span>
+					</li>
+                    
+
+<li class="girl_tag melee_tag tank_tag jungle_tag charge_tag mage_tag" style="top: 330px; left: 368px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/sejuani/">
+<img src=" http://pic4.duowan.com/lol/1201/190822766779/190833295927.jpg" class="champion_icon"></a>
+
+<div class="champion_name">瑟庄妮</div>
+			
+<span class="champion_search_text">凛冬之怒-瑟庄妮</span></li>
+
+
+
+
+
+
+<li class="boy_tag charge_tag range_tag mage_tag" style="top: 330px; left: 460px;">
+
+<a class="lol_champion" href="http://lol.duowan.com/ziggs/">
+<img src=" http://pic4.duowan.com/lol/1202/192131965665/192131975792.gif" class="champion_icon"></a>
+
+<div class="champion_name">吉格斯</div>
+			
+<span class="champion_search_text">爆破鬼才-吉格斯</span></li>
+
+
+
+
+
+
+<li class="boy_tag range_tag mage_tag" style="top: 330px; left: 552px;">
+<a class="lol_champion" href="http://lol.duowan.com/viktor/">
+<img src=" http://pic5.duowan.com/lol/1112/188475938010/188475951613.jpg" class="champion_icon"></a>
+
+<div class="champion_name">维克托</div>
+			
+<span class="champion_search_text">机械先驱-维克托</span></li>
+
+
+
+
+       
+<li class="girl_tag range_tag charge_tag mage_tag" style="top: 440px; left: 0px;">
+<a class="lol_champion" href=" http://lol.duowan.com/ahri/"><img src=" http://pic3.duowan.com/lol/1112/187869553754/187896932542.jpg" class="champion_icon"></a>
+
+<div class="champion_name">阿狸</div>
+			
+<span class="champion_search_text">九尾妖狐阿狸</span>
+</li>
+
+
+
+
+       
+<li class="boy_tag physical_tag melee_tag jungle_tag tank_tag melee_tag" style="top: 440px; left: 92px;">
+
+<a class="lol_champion" href=" http://lol.duowan.com/volibear/"><img src="http://pic.duowan.com/lol/1111/186599851229/186599920512.jpg" class="champion_icon"></a>
+
+<div class="champion_name">沃利贝尔</div>
+			
+<span class="champion_search_text">雷霆咆哮 沃利贝尔</span>
+</li>
+
+
+
+                
+       
+<li class="boy_tag melee_tag charge_tag mage_tag" style="top: 440px; left: 184px;">
+<a class="lol_champion" href=" http://lol.duowan.com/fizz/"><img src=" http://pic.duowan.com/lol/1111/185550440004/185552341067.gif" class="champion_icon"></a>
+
+<div class="champion_name">菲兹</div>
+			
+<span class="champion_search_text">潮汐海灵菲兹</span>
+</li>
+
+    
+       
+                        
+                <li class="physical_tag boy_tag tank_tag melee_tag jungle_tag" style="top: 440px; left: 276px;">
+		<a class="lol_champion" href="http://lol.duowan.com/trundle/"><img src="http://img.dwstatic.com/lol/1306/235591678174/1371636483394.png" class="champion_icon"></a>
+        
+						<div class="champion_name">特朗德尔</div>
+									
+						<span class="champion_search_text">巨魔之王 特朗德尔</span>
+                        </li>
+                        	
+
+
+                                      
+                        <li class="girl_tag mage_tag range_tag" style="top: 440px; left: 368px;">
+                        
+						<a class="lol_champion" href="http://lol.duowan.com/lux/">
+                        <img src="http://pic1.duowan.com/lol/1107/173890048848/173890450691.gif" class="champion_icon"></a>
+						<div class="champion_name">拉克丝</div>
+									
+						<span class="champion_search_text">拉克丝 光辉女郎</span>
+ 				    	</li>
+
+
+      
+      
+                                
+                        <li class="boy_tag mage_tag range_tag" style="top: 440px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/brand/">
+                        <img src="http://pic2.duowan.com/lol/1107/174073873216/174074057446.gif" class="champion_icon"></a>
+						<div class="champion_name">布兰德</div>
+									
+						<span class="champion_search_text">布兰德 复仇焰魂</span>
+ 				    	</li>
+
+            
+                        <li class="mage_tag girl_tag physical_tag charge_tag jungle_tag tank_tag melee_tag " style="top: 440px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/shyvana/"><img src=" http://pic2.duowan.com/lol/1111/184604394486/184604409309.gif" class="champion_icon"></a>
+  <div class="champion_name">希瓦娜</div>
+									
+						<span class="champion_search_text">希瓦娜 龙血武姬</span>
+					</li>
+
+                    
+                        <li class="charge_tag boy_tag physical_tag range_tag" style="top: 550px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/graves/"><img src=" http://pic1.duowan.com/lol/1110/183573526489/183573538458.jpg" class="champion_icon"></a>
+						<div class="champion_name">格雷福斯</div>
+									
+						<span class="champion_search_text">法外狂徒 格雷福斯</span>
+					</li>
+                    
+<li class="boy_tag range_tag mage_tag" style="top: 550px; left: 92px;">
+<a class="lol_champion" href="http://lol.duowan.com/xerath/">
+<img src="http://pic1.duowan.com/lol/1110/183638755440/183638769835.jpg" class="champion_icon"></a>
+
+<div class="champion_name">泽拉斯</div>
+			
+<span class="champion_search_text">远古巫灵-泽拉斯</span></li>
+
+                    
+                    
+                    
+                    
+
+
+                    <li class="boy_tag physical_tag range_tag" style="top: 550px; left: 184px;">
+<a class="lol_champion" href=" http://lol.duowan.com/twitch/"><img src=" http://lol.duowan.com/s/hero/tq.jpg" class="champion_icon"></a>
+				    <div class="champion_name">图奇</div>
+									
+						<span class="champion_search_text">图奇 瘟疫之源</span>
+</li>
+
+
+
+
+                    <li class="physical_tag charge_tag girl_tag jungle_tag tank_tag melee_tag" style="top: 550px; left: 276px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/riven/"><img src=" http://pic2.duowan.com/lol/1109/180714832441/180714870610.gif" class="champion_icon"></a>
+  <div class="champion_name">锐雯</div>
+									
+						<span class="champion_search_text">锐雯 放逐之刃</span>
+					</li>
+
+
+<li class="charge_tag boy_tag  physical_tag melee_tag" style="top: 550px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/talon/"><img src="http://pic.duowan.com/lol/1109/180008178761/180008225874.gif" class="champion_icon"></a>
+						<div class="champion_name">泰隆</div>
+									
+						<span class="champion_search_text">泰隆 刀锋之影</span>
+                        </li>
+
+<li class="physical_tag boy_tag  tank_tag mage_tag melee_tag jungle_tag" style="top: 550px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/skarner/"><img src="http://pic.duowan.com/lol/1108/178647387266/178647406694.jpg" class="champion_icon"></a>
+						<div class="champion_name">斯卡纳</div>
+									
+						<span class="champion_search_text">斯卡纳 水晶先锋</span>
+                        </li>
+                        
+                        
+                        <li class="physical_tag charge_tag boy_tag tank_tag melee_tag" style="top: 550px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/wukong/"><img src="http://pic1.duowan.com/lol/1108/176391681614/176391685171.jpg" class="champion_icon"></a>
+						<div class="champion_name">孙悟空</div>
+									
+						<span class="champion_search_text">齐天大圣 孙悟空</span>
+                        </li>
+                        	
+                            			
+	<li class="mage_tag charge_tag girl_tag physical_tag tank_tag melee_tag" style="top: 660px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/leona/"><img src="http://pic1.duowan.com/lol/1104/166448533784/175792428160.jpg" class="champion_icon"></a>
+						<div class="champion_name">蕾欧娜</div>
+									
+						<span class="champion_search_text">曙光女神·蕾欧娜</span>
+                        </li>
+                        
+                        <li class="mage_tag boy_tag tank_tag physical_tag physical_tag melee_tag" style="top: 660px; left: 92px;">
+						<a class="lol_champion" href="http://lol.duowan.com/yorick/"><img src="http://pic3.duowan.com/lol/1104/166448533784/175792432633.jpg" class="champion_icon"></a>
+						<div class="champion_name">约里克</div>
+									
+						<span class="champion_search_text">约里克·掘墓者</span>
+                        </li>                   
+                        
+                        <li class="mage_tag boy_tag range_tag" style="top: 660px; left: 184px;">
+						<a class="lol_champion" href="http://lol.duowan.com/ryze/"><img src="http://lol.duowan.com/s/hero/rz.jpg" class="champion_icon"></a>
+						<div class="champion_name">瑞兹</div>
+									
+						<span class="champion_search_text">瑞兹 流浪法师</span>
+                        
+
+					</li>
+					<li class="mage_tag melee_tag charge_tag girl_tag" style="top: 660px; left: 276px;">
+						<a class="lol_champion" href="http://lol.duowan.com/katarina/"><img src="http://lol.duowan.com/s/hero/ktln.jpg" class="champion_icon"></a>
+						<div class="champion_name">卡特琳娜</div>
+									
+						<span class="champion_search_text">不祥之刃 卡特琳娜</span>
+					</li>
+                    
+                    
+                    <li class="mage_tag girl_tag support_tag" style="top: 660px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/sona/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173890058944.gif" class="champion_icon"></a>
+						<div class="champion_name">裟娜</div>
+									
+						<span class="champion_search_text">琴瑟仙女 裟娜</span>
+					</li>
+                    
+                    <li class="mage_tag boy_tag  tank_tag range_tag" style="top: 660px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/swain/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173890255948.gif" class="champion_icon"></a>
+						<div class="champion_name">斯维因</div>
+									
+						<span class="champion_search_text">策士统领 斯维因</span>
+					</li>
+                   
+                    <li class="mage_tag charge_tag girl_tag range_tag" style="top: 660px; left: 552px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/leblanc/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173890608802.gif" class="champion_icon"></a>
+						<div class="champion_name">乐芙兰</div>
+									
+						<span class="champion_search_text">诡术妖姬 乐芙兰</span>
+					</li>
+                    
+                    
+                    <li class="girl_tag  physical_tag melee_tag" style="top: 770px; left: 0px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/irelia/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173890714469.gif" class="champion_icon"></a>
+						<div class="champion_name">艾瑞莉娅</div>
+									
+						<span class="champion_search_text">艾瑞莉娅 刀锋意志</span>
+					</li>
+                   
+                    <li class="girl_tag  mage_tag range_tag" style="top: 770px; left: 92px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/cassiopeia/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173890902009.gif" class="champion_icon"></a>
+						<div class="champion_name">卡西奥佩娅</div>
+									
+						<span class="champion_search_text">魔蛇之拥 卡西奥佩娅</span>
+					</li>
+                    
+                    <li class="girl_tag  physical_tag range_tag" style="top: 770px; left: 184px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/caitlyn/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891021710.gif" class="champion_icon"></a>
+						<div class="champion_name">凯特琳</div>
+									
+						<span class="champion_search_text">凯特琳 皮城女警</span>
+					</li>
+                    
+                    
+                    <li class="physical_tag charge_tag boy_tag  tank_tag melee_tag" style="top: 770px; left: 276px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/renekton/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891222376.gif" class="champion_icon"></a>
+						<div class="champion_name">雷克顿</div>
+									
+						<span class="champion_search_text">雷克顿 荒漠屠夫</span>
+					</li>
+                    
+                    
+             <li class="mage_tag girl_tag support_tag" style="top: 770px; left: 368px;">
+	    <a class="lol_champion" href=" http://lol.duowan.com/karma/"><img src="http://img.dwstatic.com/lol/1306/235155745723/1371200551407.png" class="champion_icon"></a>
+
+				<div class="champion_name">卡尔玛</div>
+							
+						<span class="champion_search_text">卡尔玛 天启者</span>
+					</li>
+                    
+                    <li class="mage_tag charge_tag boy_tag  tank_tag melee_tag" style="top: 770px; left: 460px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/maokai/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891429814.gif" class="champion_icon"></a>
+						<div class="champion_name">茂凯</div>
+									
+						<span class="champion_search_text">茂凯 扭曲树精</span>
+					</li>
+                    
+                    
+                    <li class="physical_tag charge_tag boy_tag jungle_tag tank_tag melee_tag" style="top: 770px; left: 552px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/jarvan/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891523896.gif" class="champion_icon"></a>
+						<div class="champion_name">嘉文四世</div>
+									
+						<span class="champion_search_text">嘉文四世 德玛西亚皇子</span>
+					</li>
+                    
+                    
+                    <li class="charge_tag boy_tag jungle_tag physical_tag melee_tag" style="top: 880px; left: 0px;">
+					<a class="lol_champion" href=" http://lol.duowan.com/nocturne/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891609201.gif" class="champion_icon"></a>
+						<div class="champion_name">魔腾</div>
+									
+						<span class="champion_search_text">魔腾 永恒梦魇</span>
+					</li>
+                    
+<li class="physical_tag charge_tag boy_tag tank_tag melee_tag jungle_tag " style="top: 880px; left: 92px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/leesin/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891698722.gif" class="champion_icon"></a>
+						<div class="champion_name">李青</div>
+									
+						<span class="champion_search_text">李青 盲僧</span>
+					</li>
+                   
+                    <li class="mage_tag boy_tag tank_tag melee_tag" style="top: 880px; left: 184px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/rumble/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891914477.gif" class="champion_icon"></a>
+						<div class="champion_name">兰博</div>
+						
+                        			
+						<span class="champion_search_text">机械公敌·兰博</span>
+					</li>
+
+
+                    <li class="charge_tag girl_tag physical_tag range_tag" style="top: 880px; left: 276px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/vayne/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173891998879.gif" class="champion_icon"></a>
+						<div class="champion_name">薇恩</div>
+									
+						<span class="champion_search_text">薇恩 暗夜猎手</span>
+					</li>
+                    
+                    
+                    <li class="mage_tag girl_tag range_tag support_tag " style="top: 880px; left: 368px;">
+						<a class="lol_champion" href=" http://lol.duowan.com/orianna/"><img src=" http://pic.duowan.com/lol/1107/173890048848/173892078905.gif" class="champion_icon"></a>
+						<div class="champion_name">奥莉安娜</div>
+									
+						<span class="champion_search_text">奥莉安娜 发条魔灵</span>
+					</li>
+                    
+                    
+					<li class="mage_tag tank_tag melee_tag boy_tag" style="top: 880px; left: 460px;">
+
+						<a class="lol_champion" href="http://lol.duowan.com/chogath/"><img src="http://lol.duowan.com/s/hero/kjs.jpg" class="champion_icon"></a>
+						<div class="champion_name">科'加斯</div>
+									
+						<span class="champion_search_text">科加斯 虚空恐惧</span>
+					</li>
+                    
+                    
+					<li class="mage_tag support_tag tank_tag melee_tag jungle_tag boy_tag" style="top: 880px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/nunu/"><img src="http://lol.duowan.com/s/hero/nn.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">努努</div>
+									
+						<span class="champion_search_text">努努 雪人骑士</span>
+					</li>
+                    
+                    
+					<li class="mage_tag charge_tag tank_tag melee_tag jungle_tag boy_tag" style="top: 990px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/amumu/"><img src="http://lol.duowan.com/s/hero/amm.jpg" class="champion_icon"></a>
+						<div class="champion_name">阿木木</div>
+
+									
+						<span class="champion_search_text">阿木木 殇之木乃伊</span>
+					</li>
+					<li class="mage_tag boy_tag range_tag" style="top: 990px; left: 92px;">
+						<a class="lol_champion" href="http://lol.duowan.com/veigar/"><img src="http://lol.duowan.com/s/hero/wj.jpg" class="champion_icon"></a>
+						<div class="champion_name">维迦</div>
+									
+						<span class="champion_search_text">邪恶小法师 维迦</span>
+					</li>
+                    
+                    
+					<li class="mage_tag tank_tag boy_tag" style="top: 990px; left: 184px;">
+						<a class="lol_champion" href="http://lol.duowan.com/singed/"><img src="http://lol.duowan.com/s/hero/xjd.jpg" class="champion_icon"></a>
+						<div class="champion_name">辛吉德</div>
+									
+						<span class="champion_search_text">辛吉德 炼金术士</span>
+
+					</li>
+					
+                    
+					<li class="charge_tag boy_tag physical_tag jungle_tag melee_tag" style="top: 990px; left: 276px;">
+						<a class="lol_champion" href="http://lol.duowan.com/tryndamere/"><img src="http://lol.duowan.com/s/hero/tdme.jpg" class="champion_icon"></a>
+						<div class="champion_name">泰达米尔</div>
+									
+						<span class="champion_search_text">泰达米尔 蛮族之王</span>
+					</li>
+					
+					<li class="physical_tag boy_tag tank_tag melee_tag" style="top: 990px; left: 368px;">
+
+						<a class="lol_champion" href="http://lol.duowan.com/mundo/"><img src="http://lol.duowan.com/s/hero/mdys.jpg" class="champion_icon"></a>
+						<div class="champion_name">蒙多</div>
+									
+						<span class="champion_search_text">蒙多 祖安狂人</span>
+					</li>
+					
+					<li class="physical_tag melee_tag jungle_tag boy_tag" style="top: 990px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/gangplank/"><img src="http://lol.duowan.com/s/hero/plk.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">普朗克</div>
+									
+						<span class="champion_search_text">普朗克 海洋之灾</span>
+					</li>
+					
+					<li class="boy_tag mage_tag charge_tag tank_tag melee_tag" style="top: 990px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/malphite/"><img src="http://lol.duowan.com/s/hero/mft.jpg" class="champion_icon"></a>
+						<div class="champion_name">墨菲特</div>
+
+									
+						<span class="champion_search_text">墨菲特 熔岩巨兽</span>
+					</li>
+       
+
+					
+					<li class="girl_tag physical_tag range_tag" style="top: 1100px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/sivir/"><img src="http://lol.duowan.com/s/hero/xwe.jpg" class="champion_icon"></a>
+						<div class="champion_name">希维尔</div>
+									
+						<span class="champion_search_text">希维尔 战争女神</span>
+					</li>
+<li class="boy_tag mage_tag jungle_tag range_tag charge_tag" style="top: 1100px; left: 92px;">
+						<a class="lol_champion" href="http://lol.duowan.com/fiddlesticks/"><img src="http://lol.duowan.com/s/hero/fdtk.jpg" class="champion_icon"></a>
+						<div class="champion_name">费德提克</div>
+									
+						<span class="champion_search_text">费德提克 末日使者</span>
+  				    	</li>
+					
+				    <li class="mage_tag physical_tag melee_tag girl_tag range_tag " style="top: 1100px; left: 184px;">
+					<a class="lol_champion" href="http://lol.duowan.com/kayle/"><img src="http://lol.duowan.com/s/hero/ke.jpg" class="champion_icon"></a>
+						<div class="champion_name">凯尔</div>
+									
+						<span class="champion_search_text">凯尔 审判天使</span>
+					</li>
+					
+					<li class="mage_tag range_tag girl_tag" style="top: 1100px; left: 276px;">
+						<a class="lol_champion" href="http://lol.duowan.com/anivia/"><img src="http://lol.duowan.com/s/hero/anwy.jpg" class="champion_icon"></a>
+						<div class="champion_name">艾尼维亚</div>
+									
+						<span class="champion_search_text">艾尼维亚 冰晶凤凰</span>
+					</li>
+					
+                    
+					<li class="mage_tag physical_tag range_tag boy_tag" style="top: 1100px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/teemo/"><img src="http://lol.duowan.com/s/hero/tm.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">提莫</div>
+									
+						<span class="champion_search_text">提莫 侦察兵</span>
+					</li>
+					
+					<li class="physical_tag range_tag girl_tag" style="top: 1100px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/ashe/"><img src="http://lol.duowan.com/s/hero/ax.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">艾希</div>
+									
+						<span class="champion_search_text">艾希 寒冰射手</span>
+					</li>
+					
+					<li class="girl_tag mage_tag range_tag" style="top: 1100px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/annie/"><img src="http://lol.duowan.com/s/hero/an.jpg" class="champion_icon"></a>
+						<div class="champion_name">安妮</div>
+
+									
+						<span class="champion_search_text">安妮 黑暗之女</span>
+					</li>
+					
+					<li class="charge_tag girl_tag  physical_tag range_tag" style="top: 1210px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/tristana/"><img src="http://lol.duowan.com/s/hero/cstn.jpg" class="champion_icon"></a>
+						<div class="champion_name">崔丝塔娜</div>
+									
+						<span class="champion_search_text">崔丝塔娜 麦林炮手</span>
+					</li>
+					
+					<li class="mage_tag charge_tag boy_tag physical_tag melee_tag" style="top: 1210px; left: 92px;">
+						<a class="lol_champion" href="http://lol.duowan.com/jax/"><img src="http://lol.duowan.com/s/hero/jks.jpg" class="champion_icon"></a>
+						<div class="champion_name">贾克斯</div>
+									
+						<span class="champion_search_text">贾克斯 武器大师 </span>
+
+					</li>
+					
+					<li class="charge_tag boy_tag jungle_tag physical_tag melee_tag" style="top: 1210px; left: 184px;">
+						<a class="lol_champion" href="http://lol.duowan.com/yi/"><img src="http://lol.duowan.com/s/hero/y.jpg" class="champion_icon"></a>
+						<div class="champion_name">易</div>
+									
+						<span class="champion_search_text">易 无极剑圣</span>
+					</li>
+					
+					<li class="charge_tag boy_tag physical_tag range_tag" style="top: 1210px; left: 276px;">
+
+						<a class="lol_champion" href="http://lol.duowan.com/corki/"><img src="http://lol.duowan.com/s/hero/kq.jpg" class="champion_icon"></a>
+						<div class="champion_name">库奇</div>
+									
+						<span class="champion_search_text">卡奇 英勇投弹手</span>
+					</li>
+					
+					<li class="mage_tag support_tag charge_tag tank_tag melee_tag boy_tag" style="top: 1210px; left: 368px;">
+					<a class="lol_champion" href="http://lol.duowan.com/alistar/"><img src="http://lol.duowan.com/s/hero/alst.jpg" class="champion_icon"></a>
+						<div class="champion_name">阿利斯塔</div>
+									
+						<span class="champion_search_text">阿利斯塔 牛头酋长</span>
+					</li>
+					
+					<li class="mage_tag tank_tag melee_tag boy_tag" style="top: 1210px; left: 460px;">
+				<a class="lol_champion" href="http://lol.duowan.com/blitzcrank/"><img src="http://lol.duowan.com/s/hero/blc.jpg" class="champion_icon"></a>
+						<div class="champion_name">布里茨</div>
+									
+						<span class="champion_search_text">布里茨 蒸汽机器人</span>
+					</li>
+					
+					<li class="mage_tag support_tag girl_tag" style="top: 1210px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/soraka/"><img src="http://lol.duowan.com/s/hero/slk.jpg" class="champion_icon"></a>
+						<div class="champion_name">索拉卡</div>
+									
+						<span class="champion_search_text">索拉卡 众星之子</span>
+					</li>
+					
+                    
+					<li class="tank_tag melee_tag boy_tag" style="top: 1320px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/nasus/"><img src="http://lol.duowan.com/s/hero/nss.jpg" class="champion_icon"></a>
+						<div class="champion_name">内瑟斯</div>
+									
+						<span class="champion_search_text">沙漠死神 内瑟斯</span>
+
+					</li>
+					
+					<li class="boy_tag charge_tag physical_tag melee_tag jungle_tag tank_tag" style="top: 1320px; left: 92px;">
+						<a class="lol_champion" href="http://lol.duowan.com/warwick/"><img src="http://lol.duowan.com/s/hero/wlk.jpg" class="champion_icon"></a>
+						<div class="champion_name">沃里克</div>
+									
+						<span class="champion_search_text">沃里克 嗜血猎手</span>
+					</li>
+					
+					<li class="mage_tag girl_tag range_tag" style="top: 1320px; left: 184px;">
+					<a class="lol_champion" href="http://lol.duowan.com/morgana/"><img src="http://lol.duowan.com/s/hero/mgn.jpg" class="champion_icon"></a>
+						<div class="champion_name">莫甘娜</div>
+									
+						<span class="champion_search_text">堕落天使 莫甘娜</span>
+					</li>
+					
+					<li class="mage_tag tank_tag melee_tag jungle_tag boy_tag" style="top: 1320px; left: 276px;">
+					<a class="lol_champion" href="http://lol.duowan.com/rammus/"><img src="http://lol.duowan.com/s/hero/lms.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">拉莫斯</div>
+									
+						<span class="champion_search_text">拉莫斯 披甲龙龟</span>
+					</li>
+                    
+					
+					<li class="mage_tag charge_tag boy_tag  melee_tag" style="top: 1320px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/kassadin/"><img src="http://lol.duowan.com/s/hero/ksd.jpg" class="champion_icon"></a>
+						<div class="champion_name">卡萨丁</div>
+
+									
+						<span class="champion_search_text">卡萨丁 虚空行者</span>
+					</li>
+					
+					<li class="mage_tag boy_tag melee_tag" style="top: 1320px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/sion/"><img src="http://lol.duowan.com/s/hero/se.jpg" class="champion_icon"></a>
+						<div class="champion_name">赛恩</div>
+									
+						<span class="champion_search_text">赛恩 亡灵勇士</span>
+					</li>
+					
+                    
+					<li class="mage_tag support_tag boy_tag tank_tag melee_tag melee_tag" style="top: 1320px; left: 552px;">
+					<a class="lol_champion" href="http://lol.duowan.com/taric/"><img src="http://lol.duowan.com/s/hero/tlk.jpg" class="champion_icon"></a>
+						<div class="champion_name">塔里克</div>
+									
+						<span class="champion_search_text">塔里克 宝石骑士</span>
+				    	</li>
+					
+					<li class="mage_tag support_tag girl_tag range_tag" style="top: 1430px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/janna/"><img src="http://lol.duowan.com/s/hero/jn.jpg" class="champion_icon"></a>
+						<div class="champion_name">迦娜</div>
+									
+						<span class="champion_search_text">风暴之怒 迦娜</span>
+					</li>
+					
+					<li class="mage_tag boy_tag range_tag support_tag" style="top: 1430px; left: 92px;">
+
+						<a class="lol_champion" href="http://lol.duowan.com/zilean/"><img src="http://lol.duowan.com/s/hero/jl.jpg" class="champion_icon"></a>
+						<div class="champion_name">基兰</div>
+									
+						<span class="champion_search_text">基兰 时光守护者</span>
+					</li>
+					
+					<li class="mage_tag  physical_tag boy_tag range_tag charge_tag" style="top: 1430px; left: 184px;">
+						<a class="lol_champion" href="http://lol.duowan.com/twisted/"><img src="http://lol.duowan.com/s/hero/cst.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">崔斯特</div>
+									
+						<span class="champion_search_text">崔斯特 卡牌大师</span>
+					</li>
+					
+					<li class=" mage_tag girl_tag physical_tag melee_tag  jungle_tag " style="top: 1430px; left: 276px;">
+
+				<a class="lol_champion" href="http://lol.duowan.com/evelynn/">
+
+                                <img src="http://lol.duowan.com/s/hero/yfl.jpg" class="champion_icon"></a>
+
+				<div class="champion_name">伊芙琳</div>
+
+							
+
+				<span class="champion_search_text">伊芙琳 寡妇制造者</span>
+
+				</li>
+					
+                    
+                    
+					<li class="boy_tag mage_tag range_tag" style="top: 1430px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/karthus/"><img src="http://lol.duowan.com/s/hero/kess.jpg" class="champion_icon"></a>
+						<div class="champion_name">卡尔萨斯</div>
+									
+						<span class="champion_search_text">卡尔萨斯 死亡颂唱者</span>
+					</li>
+					
+					
+					
+					
+					<li class="mage_tag physical_tag melee_tag boy_tag jungle_tag charge_tag" style="top: 1430px; left: 460px;">
+						<a class="lol_champion" href="http://lol.duowan.com/shaco/"><img src="http://lol.duowan.com/s/hero/sk.jpg" class="champion_icon"></a>
+						<div class="champion_name">萨科</div>
+									
+						<span class="champion_search_text">萨科 恶魔小丑</span>
+					</li>
+                    
+                    
+					<li class="mage_tag range_tag boy_tag" style="top: 1430px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/haimdinger/"><img src="http://lol.duowan.com/s/hero/hmdg.jpg" class="champion_icon"></a>
+						<div class="champion_name">黑默丁格</div>
+									
+						<span class="champion_search_text">黑默丁格 大发明家</span>
+					</li>
+                    
+					<li class="mage_tag physical_tag melee_tag girl_tag charge_tag" style="top: 1540px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/akali/"><img src="http://lol.duowan.com/s/hero/akl.jpg" class="champion_icon"></a>
+
+						<div class="champion_name">阿卡丽</div>
+									
+						<span class="champion_search_text">阿卡丽 暗影之拳</span>
+					</li>
+                    
+                    
+                    
+					<li class="tank_tag melee_tag physical_tag boy_tag" style="top: 1540px; left: 92px;">
+				<a class="lol_champion" href="http://lol.duowan.com/udyr/"><img src="http://lol.duowan.com/s/hero/wde.jpg" class="champion_icon"></a>
+						<div class="champion_name">乌迪尔</div>
+
+									
+						<span class="champion_search_text">乌迪尔 兽灵行者</span>
+					</li>
+                    
+                    
+					<li class="physical_tag boy_tag tank_tag melee_tag" style="top: 1540px; left: 184px;">
+						<a class="lol_champion" href="http://lol.duowan.com/garen/"><img src="http://lol.duowan.com/s/hero/gl.jpg" class="champion_icon"></a>
+						<div class="champion_name">盖伦</div>
+									
+						<span class="champion_search_text">盖伦 德玛西亚</span>
+					</li>                                        
+					<li class="boy_tag mage_tag range_tag" style="top: 1540px; left: 276px;">
+						<a class="lol_champion" href="http://lol.duowan.com/kennen/"><img src="http://lol.duowan.com/s/hero/kn.jpg" class="champion_icon"></a>
+						<div class="champion_name">凯南</div>
+									
+						<span class="champion_search_text">狂暴之心 凯南 </span>
+  </li> 
+                    
+					<li class="physical_tag boy_tag mage_tag range_tag" style="top: 1540px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/kogmaw/"><img src="http://lol.duowan.com/s/hero/kgm.jpg" class="champion_icon"></a>
+						<div class="champion_name">克格'莫</div>
+									
+						<span class="champion_search_text">克格'莫 深渊巨口</span>
+					</li> 
+                    
+                    
+					<li class="mage_tag range_tag boy_tag" style="top: 1540px; left: 460px;">
+
+						<a class="lol_champion" href="http://lol.duowan.com/malzahar/"><img src="http://lol.duowan.com/s/hero/mezh.jpg" class="champion_icon"></a>
+						<div class="champion_name">玛尔扎哈</div>
+									
+						<span class="champion_search_text">玛尔扎哈 虚空先知</span>
+					</li> 
+                    
+                    
+                    
+					<li class="mage_tag tank_tag melee_tag boy_tag" style="top: 1540px; left: 552px;">
+						<a class="lol_champion" href="http://lol.duowan.com/mordekaiser/"><img src="http://lol.duowan.com/s/hero/mdks.jpg" class="champion_icon"></a>
+						<div class="champion_name">莫德凯撒</div>
+
+									
+						<span class="champion_search_text">莫德凯撒 金属大师</span>
+					</li>   
+                    
+                                                          
+					<li class="mage_tag physical_tag melee_tag range_tag girl_tag support_tag" style="top: 1650px; left: 0px;">
+						<a class="lol_champion" href="http://lol.duowan.com/nidalee/"><img src="http://lol.duowan.com/s/hero/ndl.jpg" class="champion_icon"></a>
+						<div class="champion_name">奈德丽</div>
+									
+						<span class="champion_search_text">奈德丽 狂野女猎手</span>
+					</li>  
+                    
+                     
+					<li class="mage_tag physical_tag range_tag boy_tag charge_tag" style="top: 1650px; left: 92px;">
+				<a class="lol_champion" href="http://lol.duowan.com/ezreal/"><img src="http://lol.duowan.com/s/hero/ezre.jpg" class="champion_icon"></a>
+						<div class="champion_name">伊泽瑞尔</div>
+									
+						<span class="champion_search_text">伊泽瑞尔 探险家</span>
+					</li>   
+                                        
+                <li class="mage_tag tank_tag melee_tag boy_tag charge_tag" style="top: 1650px; left: 184px;">
+				<a class="lol_champion" href="http://lol.duowan.com/gragas/"><img src="http://lol.duowan.com/s/hero/gljs.jpg" class="champion_icon"></a>
+						<div class="champion_name">古拉加斯</div>
+									
+						<span class="champion_search_text">古拉加斯 酒桶</span>
+					</li>
+                    
+                                           
+                    <li class="boy_tag tank_tag melee_tag physical_tag jungle_tag melee_tag" style="top: 1650px; left: 276px;">
+						<a class="lol_champion" href="http://lol.duowan.com/olaf/"><img src="http://lol.duowan.com/s/hero/alf.jpg" class="champion_icon"></a>
+						<div class="champion_name">奥拉夫</div>
+
+									
+						<span class="champion_search_text">奥拉夫 狂战士</span>
+					</li> 
+                    
+                                          
+                    <li class="physical_tag melee_tag boy_tag charge_tag" style="top: 1650px; left: 368px;">
+						<a class="lol_champion" href="http://lol.duowan.com/pantheon/"><img src="http://lol.duowan.com/s/hero/ps.jpg" class="champion_icon"></a>
+						<div class="champion_name">潘森</div>
+									
+						<span class="champion_search_text">潘森 战争之王</span>
+				    	</li>
+                    
+                                           
+                    <li class="mage_tag physical_tag  tank_tag girl_tag melee_tag charge_tag" style="top: 1650px; left: 460px;">
+					<a class="lol_champion" href="http://lol.duowan.com/poppy/"><img src="http://lol.duowan.com/s/hero/bb.jpg" class="champion_icon"></a>
+						<div class="champion_name">波比</div>
+									
+						<span class="champion_search_text">波比 钢铁大使</span>
+					</li>
+                    
+                    
+					<li class="physical_tag boy_tag  tank_tag melee_tag jungle_tag charge_tag" style="top: 1650px; left: 552px;">
+					<a class="lol_champion" href="http://lol.duowan.com/shen/"><img src="http://lol.duowan.com/s/hero/s.jpg" class="champion_icon"></a>
+					<div class="champion_name">慎</div>
+								
+						<span class="champion_search_text">慎 暮光之眼</span>
+					</li>
+                    
+                    
+					<li class="charge_tag boy_tag jungle_tag physical_tag melee_tag" style="top: 1760px; left: 0px;">
+			<a class="lol_champion" href="http://lol.duowan.com/xinzhao/"><img src="http://lol.duowan.com/s/hero/zx.jpg" class="champion_icon"></a>
+						<div class="champion_name">赵信</div>
+									
+						<span class="champion_search_text">赵信 德邦总管</span>
+					</li>		
+                    
+                    			              
+					<li class="boy_tag mage_tag tank_tag range_tag" style="top: 1760px; left: 92px;">
+				<a class="lol_champion" href="http://lol.duowan.com/vladimir/"><img src="http://lol.duowan.com/s/hero/fljme.jpg" class="champion_icon"></a>
+						<div class="champion_name">弗拉基米尔</div>
+								
+						<span class="champion_search_text">弗拉基米尔 猩红收割者</span>
+					</li>	
+                    
+                    <li class="mage_tag boy_tag tank_tag melee_tag" style="top: 1760px; left: 184px;">
+						<a class="lol_champion" href="http://lol.duowan.com/galio/"><img src="http://lol.duowan.com/s/hero/jla.jpg" class="champion_icon"></a>
+						<div class="champion_name">加里奥</div>
+									
+						<span class="champion_search_text">加里奥 哨兵之殇</span>
+					</li>
+                    
+                    <li class="physical_tag range_tag boy_tag" style="top: 1760px; left: 276px;">
+					<a class="lol_champion" href="http://lol.duowan.com/urgot/"><img src="http://lol.duowan.com/s/hero/ejt.jpg" class="champion_icon"></a>
+						<div class="champion_name">厄加特</div>
+									
+						<span class="champion_search_text">加里奥 首领之傲</span>
+					</li>  
+                    
+                     
+         <li class="girl_tag physical_tag range_tag" style="top: 1760px; left: 368px;">
+	<a class="lol_champion" href="http://lol.duowan.com/missfortune/"><img src="http://img.dwstatic.com/lol/1306/235058999669/1371103804008.jpg" class="champion_icon"></a>
+						<div class="champion_name">厄运小姐</div>
+									
+						<span class="champion_search_text">赏金猎人 厄运小姐</span>
+</li>
+
+					</ul></div>
+				</div>				
+			</div>
+			<!-- }英雄列表 -->			
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7f4c481c9f27c65d75d6206fd1ca2ea7' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript" src=" http://hm.baidu.com/h.js?7f4c481c9f27c65d75d6206fd1ca2ea7"></script>
+
+<style type="text/css">
+/*------------banner下拉广告 lol盒子-------------*/
+#doc {background: url(http://img.dwstatic.com/lol/1305/232372061853/1368416916076.jpg) no-repeat 50% 0;}
+
+.top-hezi-ad {background:#b0e1ff; position: relative;height:auto;_height:0; z-index: 10;}
+.top-hezi-ad-bd {background: url(http://lol.duowan.com/s/v2/top-hezi-ad-bg.png?2013) no-repeat; height:0; width:1000px;margin: 0 auto; position: relative; overflow: hidden;}
+.top-hezi-ad .top-hezi-index { position: absolute; left:0; top:0; width:770px; height:120px;}
+.top-hezi-ad .top-hezi-ios { position: absolute; left:771px; top:21px; width:110px; height:36px; background: url(http://lol.duowan.com/s/v2/top-hezi-ad-btn.png?2013) no-repeat;}
+.top-hezi-ad .top-hezi-android { position: absolute; left:771px; top:64px; width:110px; height:36px; background: url(http://lol.duowan.com/s/v2/top-hezi-ad-btn.png?2013) no-repeat 0 -36px;}
+.top-hezi-ad .top-hezi-qrcode { position: absolute; left:898px; top:15px; width:90px; height:90px; }
+.top-hezi-ad .top-hezi-ios:hover {background-position: -110px 0;}
+.top-hezi-ad .top-hezi-android:hover {background-position: -110px -36px;}
+
+.top-hezi-ad-trigger{width:180px; height:140px; position: absolute; top: 20px; left:50%; margin:0 0 0 290px; z-index: 10;  overflow: hidden;}
+.top-hezi-ad-trigger a {display: block;height:100%; background: url(http://lol.duowan.com/s/v2/top-hezi-ad-trigger.png?2013) no-repeat center; _background: url(http://lol.duowan.com/s/v2/top-hezi-ad-trigger-ie6.png?2013) no-repeat center; display: none;}
+.top-hezi-ad-trigger embed { pointer-events: none;}
+.top-hezi-ad-trigger-opened a { display: block;}
+.top-hezi-ad-trigger-opened embed { display: none;}
+.top-hezi-ad-trigger img {position: absolute; width:100%; height:100%; cursor:pointer;left:0;top:0;}
+</style>
+
+<div class="tooltip champion_tooltip" style="left: 460px; top: 560px; display: none;">
+                        <img src="http://img.dwstatic.com/lol/1311/249491473153/1385536285032.png">
+						<h2 class="champion_name">亚索</h2>
+
+						<h3 class="champion_title">疾风剑豪</h3>
+
+						<p>“我的逃亡之旅到底还需要持续多久？即使是最强之风，终有一天也会在瓦罗兰大陆中逝去”-亚索</p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,突进,打野,刺客</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55" style="left: 524px; top: 534px; display: none;">
+<img src="http://img.dwstatic.com/lol/1310/245353650426/1381398467886.png">
+
+<h2 class="champion_name">金克丝</h2>
+<h3 class="champion_title">暴走萝莉</h3>
+<p>金克丝活着就是为了不计后果的四处肆虐，在她身后留下的只有一片混乱与恐慌。她是一名暴躁而残忍的罪犯，她蔑视一切仅仅是因为无聊，她会在她认为最无趣的地方：皮尔特沃夫。</p>
+
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:刷钱，远程， </span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55" style="left: 624px; top: 534px; display: none;">
+<img src="http://img.dwstatic.com/lol/1308/240574668479/1376619482925.png">
+<h2 class="champion_name">卢锡安</h2>
+<h3 class="champion_title">圣枪游侠</h3>
+
+<p>卢锡安使用的是拥有传承力量的神圣武器，并成为对付不死族群的卫士。 他冷静而强大，面对无尽的恐怖时仍然可以惩罚对手通过其拥有的驱除之火。</p>
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:刷钱，远程， </span>
+</div>
+</div><div class="tooltip champion_tooltip">
+
+                        <img src="http://img.dwstatic.com/lol/1306/235048838354/1371093644361.png">
+
+						<h2 class="champion_name">亚托克斯</h2>
+
+						<h3 class="champion_title">暗裔剑魔</h3>
+
+				<p>“战者，或为荣耀，或为赞颂。然此皆仅为战所存也。”&mdash;&mdash;亚托克斯 </p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战，突进，控制，复活，打野</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_113">
+
+              <img src="http://img.dwstatic.com/lol/1305/231871544650/231871561051.png">
+						<h2 class="champion_name">丽桑卓</h2>
+						<h3 class="champion_title">冰霜女巫</h3>
+
+						<p>闭上眼睛，让寒冷将你夺去。”&mdash;&mdash;丽桑卓</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 远程,打钱,突进</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_112">
+                                                <img src="http://img5.dwstatic.com/lol/1303/228242985967/228242993255.png">
+						<h2 class="champion_name">扎克</h2>
+						<h3 class="champion_title">生化魔人</h3>
+
+						<p>“即使你没有脊柱，你依然必须站起来。”&mdash;扎克</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,打野,突进</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_111">
+
+                        <img src="http://img3.dwstatic.com/lol/1302/225381420352/225382419902.png">
+
+						<h2 class="champion_name">奎因</h2>
+
+						<h3 class="champion_title">德玛西亚之翼</h3>
+
+						<p>大多数士兵会依赖他们的武器。只有少数人才会真正地相互依赖。&mdash;&mdash;奎因</p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: CARRY,突进,物理</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_110" style="left: 467px; top: 637px; display: none;">
+                        
+            <img src="http://img.dwstatic.com/lol/1301/222714364061/222714396868.png">
+                        
+			<h2 class="champion_name">锤石</h2>
+
+			<h3 class="champion_title">魂锁典狱长</h3>
+
+			<p> 魂锁典狱长的过去鲜为人知，并且大多数细节只存在于童谣和传闻中。它们讲述着一个丧心病狂的狱卒的故事。</p>
+                        
+			<div class="champion_tooltip_footer">
+                      
+		 <span class="champion_tooltip_tags">Tags: 远程,辅助,坦克</span>
+
+	  	</div>
+	        </div><div class="tooltip champion_tooltip" style="left: 553px; top: 659px; display: none;">
+
+                        <img src="http://pic2.duowan.com/lol/1212/219251307713/219251317038.png">
+
+						<h2 class="champion_name">蔚</h2>
+
+						<h3 class="champion_title">皮城执法官</h3>
+
+						<p>“真遗憾。我有两只拳头，但你的脸上只放得下一只。”-蔚</p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,突进,打野</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+                        <img src="http://pic.duowan.com/lol/1211/218041518261/218041566099.jpg">
+						<h2 class="champion_name">娜美</h2>
+
+						<h3 class="champion_title">唤潮鲛姬</h3>
+
+						<p>“我即是狂澜，且无法被力挽。”-唤潮鲛姬·娜美。</p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 远程,辅助,法师</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+                        <img src="http://pic4.duowan.com/lol/1211/216813960863/216813987373.jpg">
+						<h2 class="champion_name">劫</h2>
+
+						<h3 class="champion_title">影流之主</h3>
+
+						<p>“均衡只是一个骗局，我们才是真正的忍者！”影流之主-劫</p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,突进,打野,刺客</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+                <img src="http://pic5.duowan.com/lol/1210/215627370104/215627419666.png">
+						<h2 class="champion_name">伊莉丝</h2>
+
+						<h3 class="champion_title">蜘蛛女皇</h3>
+						<p>“真正的追随者无需害怕蜘蛛的拥抱。”-伊莉丝</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 远程,打钱,突进</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+                        <img src="http://pic3.duowan.com/lol/1209/212665448739/212665677660.jpg">
+						<h2 class="champion_name">卡'兹克</h2>
+
+						<h3 class="champion_title">虚空掠夺者</h3>
+
+						<p>如果你愿意探索大自然的奇妙，你会发现有相当一部分数量的动物充分适应着生存环境。当然，偶尔你会遇见一种生物能够适应任何环境。比如：虚空掠夺者-卡'兹克。</p>
+                        
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,打钱,刺客</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+
+           <img src="http://pic3.duowan.com/lol/1208/210247342385/210247356941.png">
+						<h2 class="champion_name">辛德拉</h2>
+
+						<h3 class="champion_title">暗黑元首</h3>
+						<p>”能量属于那些能够运用它的人！"-辛德拉</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 法师,打钱,</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" style="left: 441px; top: 748px; display: none;">
+                        <img src="http://pic5.duowan.com/lol/1208/209057869812/209057893970.jpg">
+						<h2 class="champion_name">雷恩加尔</h2>
+
+						<h3 class="champion_title">傲之追猎者</h3>
+						<p>“单手宰羊，不如双手屠狼。”&mdash;&mdash;雷恩加尔。</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,打钱,突进</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+                        <img src="http://pic.duowan.com/lol/1208/207845244716/207847215830.jpg">
+						<h2 class="champion_name">黛安娜</h2>
+
+						<h3 class="champion_title">皎月女神</h3>
+						<p>黛安娜投身于战斗的热浪中，挥舞着她月牙枪刃，无情地施放着她的月光能量。</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,打钱,突进</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+                        <img src="http://pic.duowan.com/lol/1207/207224467449/207225320108.png">
+						<h2 class="champion_name">婕拉</h2>
+
+						<h3 class="champion_title">荆棘之兴</h3>
+						<p>靠近那些美丽的花儿，就靠近一些荆棘”-婕拉</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 远程,打钱,控制</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic.duowan.com/lol/1207/205773506081/205773517075.png">
+<h2 class="champion_name">杰斯</h2>
+<h3 class="champion_title">未来守护者</h3>
+
+<p>&#12288;&#12288;武装着睿智与魅力，以及标志性的可变形铁锤，杰斯毕生致力于守护他的祖国，皮尔特沃夫。</p>
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:刷钱，远程，近战 </span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src=" http://pic2.duowan.com/lol/1206/202484172754/202487208149.png">
+
+<h2 class="champion_name">德莱文</h2>
+<h3 class="champion_title">荣耀行刑官</h3>
+<p>&#12288;&#12288;德莱文的所有行刑都变成了一个考验，诺克萨斯的囚犯们为了最后的一线生机而奔跑的考验。他把这个考验当做他的个人舞台，并且将行刑转变成了一种主流的娱乐方式。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:刷钱，远程 </span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic.duowan.com/lol/1203/196184525178/201804651313.jpg">
+
+
+<h2 class="champion_name">德莱厄斯</h2>
+
+ <h3 class="champion_title">诺克萨斯之手</h3>
+
+						<p>团结一致的诺克萨斯能够掌控整个世界！而且理应如此！</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">近战，输出，</span>
+</div>
+</div><div class="tooltip champion_tooltip">
+                        <img src="http://pic.duowan.com/lol/1204/197906703906/197908560081.jpg">
+						<h2 class="champion_name">赫卡里姆</h2>
+
+						<h3 class="champion_title">战争之影</h3>
+						<p>这位高大魁梧、披坚执锐的幽魂就已将恐惧深深地植入到了那些见过他的人们的心中。</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">Tags: 近战,打野,控制</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic3.duowan.com/lol/1204/198079462173/198079477246.jpg">
+
+
+<h2 class="champion_name">韦鲁斯</h2>
+ <h3 class="champion_title">惩戒之箭</h3>
+
+				<p>为了镇压一个远古的腐败深渊而建的一间寺院。这个深渊是那么地令人不安。韦鲁斯被一间神圣的艾欧尼亚寺院选作守望者。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">远程，输出，控制，</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55" style="left: 600px; top: 893px; display: none;">
+<img src="http://pic4.duowan.com/lol/1203/196696818878/196703018435.png">
+
+
+<h2 class="champion_name">璐璐</h2> 
+<h3 class="champion_title">仙灵女巫</h3>
+
+						<p>璐璐率性而为的程度，也许联盟中没有哪个英雄能够比得上。在班德尔城中度过的青春岁月中，她总是把大部分时间都花在林间漫步或者做白日梦上。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">辅助，法系，控制</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic.duowan.com/lol/1203/195754588847/195755907116.png">
+
+
+<h2 class="champion_name">菲奥娜</h2>
+ <h3 class="champion_title">无双剑姬</h3>
+
+						<p>'想和我共舞一曲死亡的华尔兹么？'-菲奥娜</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">突进,打野,物理</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_54">
+						<img src="http://pic4.duowan.com/lol/1202/193328146015/193333009937.gif">
+						<h2 class="champion_name">诺提勒斯</h2>
+						<h3 class="champion_title">深海泰坦</h3>
+						<p>诺提勒斯苏醒时，他变得有些不太一样了。庞大的铁质潜水服已经变成了一个浑然一体的甲壳。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 打野, 控制, 近战</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic4.duowan.com/lol/1201/190822766779/190833295927.jpg">
+
+
+<h2 class="champion_name">瑟庄妮</h2>
+ <h3 class="champion_title">凛冬之怒</h3>
+
+         	<p>&#12288;当瑟庄妮出生的时候，部落的预言者就说过，她将会成为统一这个分裂部族的领袖。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:打野，减速，晕眩，坦克</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic4.duowan.com/lol/1202/192131965665/192131975792.gif">
+<h2 class="champion_name">吉格斯</h2>
+<h3 class="champion_title">爆破鬼才</h3>
+
+<p>吉格斯生来就有着捣鼓机械的天赋，但他自由散漫、过度亢奋的天性在约德尔科学家当中实属罕见。很早以前，吉格斯就已经制造出了一批被他亲昵地称为"海克斯爆破"的强力炸弹。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:法师，减速，远程，打钱</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic5.duowan.com/lol/1112/188475938010/188475951613.jpg">
+<h2 class="champion_name">维克托</h2>
+<h3 class="champion_title">机械先驱</h3>
+
+<p>在年轻时，维克托就发现了他对科学与发明的激情，特别是机械自动化这一领域。他参加了祖安享有盛名的科技魔法大学，并带领了一支队伍，研发出了布里兹这一科学史上的突破。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:法师，控制，远程</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src=" http://pic3.duowan.com/lol/1112/187869553754/187896932542.jpg">
+<h2 class="champion_name">阿狸</h2>
+<h3 class="champion_title">九尾妖狐</h3>
+
+<p>即便阿狸已成人形，她也知道这次幻化并不完整。作为一只机敏的生物，她很快就适应了人类社会的风俗礼仪，并以她不可多得的天生丽质去吸引心无戒备的男人。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:远程，控制，法师 </span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic.duowan.com/lol/1111/186599851229/186599920512.jpg">
+<h2 class="champion_name">沃利贝尔</h2>
+
+<h3 class="champion_title">雷霆咆哮</h3>
+
+<p>沃利贝尔开始了他漫长而危险的登山历程。当他到达了顶峰，凝视着上面怒吼的风暴，他看见了一个可怕的景象&mdash;&mdash;弗雷卓德整个被战争笼罩。</p>
+
+<div class="champion_tooltip_footer">
+
+<span class="champion_tooltip_tags">Tags:近战，控制，战士，打野 </span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src=" http://pic.duowan.com/lol/1111/185550440004/185552341067.gif">
+<h2 class="champion_name">菲兹</h2>
+<h3 class="champion_title">潮汐海灵</h3>
+
+<p>菲兹在大海中流浪数年去寻找他的人民，用他在冒险中学来的本领生存。最终，菲兹到达了比尔吉沃特港口。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:近战，法师 </span>
+</div>
+</div><div class="tooltip champion_tooltip">
+						<img src="http://img.dwstatic.com/lol/1306/235591678174/1371636483394.png">
+						<h2 class="champion_name">特朗德尔</h2>
+
+						<h3 class="champion_title">巨魔之王</h3>
+						<p>一个睿智的萨满发现他可以将整个部落的诅咒通过魔法转移到某一个巨魔战士身上，然而部落里一直没有这样的战士出现...直至特朗德尔出生。</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 坦克, 战士</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://pic1.duowan.com/lol/1107/173890048848/173890450691.gif">
+						<h2 class="champion_name">拉克丝</h2>
+                        
+						<h3 class="champion_title">光辉女郎</h3>
+						<p>拉克丝天生就属于显赫的皇冠卫队，出自德玛西亚的模范家庭她注定要成就一番伟业。</p>
+						<div class="champion_tooltip_footer">
+					    <span class="champion_tooltip_tags">tags: 法师, 控制, 远程, 后期</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://pic2.duowan.com/lol/1107/174073873216/174074057446.gif">
+						<h2 class="champion_name">布兰德</h2>
+                        
+						<h3 class="champion_title">复仇焰魂</h3>
+						<p>古书里将其称为复仇焰魂。这个一个充满灼热仇恨的生物，它的存在就是为了将人类和约德尔人生存的地方夷为平地。</p>
+						<div class="champion_tooltip_footer">
+					    <span class="champion_tooltip_tags">tags: 法师, 眩晕, 爆发, 远程, 后期</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic2.duowan.com/lol/1111/184604394486/184604409309.gif">
+						<h2 class="champion_name">希瓦娜</h2>
+						<h3 class="champion_title">龙血武姬</h3>
+
+						<p>以父之名，赐你死亡！</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺客，近战 </span>
+						</div>
+  </div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic1.duowan.com/lol/1110/183573526489/183573538458.jpg">
+						<h2 class="champion_name">格雷福斯</h2>
+						<h3 class="champion_title">法外狂徒</h3>
+
+						<p>格雷福斯出生在比尔吉沃特酒馆的后院，和一瓶混了酒精的牛奶一起被遗弃。残酷的现实迫使他在众多城市的地下社会勉强度日。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刷钱 远程 </span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+<img src="http://pic1.duowan.com/lol/1110/183638755440/183638769835.jpg">
+<h2 class="champion_name">泽拉斯</h2>
+<h3 class="champion_title">远古巫灵</h3>
+
+<p>摆脱了血肉之躯后，泽拉斯几乎能掌控无尽的能量。</p>
+
+<div class="champion_tooltip_footer">
+<span class="champion_tooltip_tags">Tags:法师，控制，远程</span>
+</div>
+</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://lol.duowan.com/s/hero/tq.jpg">
+						<h2 class="champion_name">图奇</h2>
+						<h3 class="champion_title">瘟疫之源</h3>
+
+						<p>他在佐恩&mdash;&mdash;也就是赋予他进化的感知的城市，找到了一位慷慨的资助者。图奇是佐恩在联盟的最早的英雄之一，当瓦洛兰城邦起了政治纷争之时，他便为佐恩而战。。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺客 远程 隐身</span>
+						</div>
+					  </div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic2.duowan.com/lol/1109/180714832441/180714870610.gif">
+						<h2 class="champion_name">锐雯</h2>
+						<h3 class="champion_title">放逐之刃</h3>
+
+						<p>她是残忍高效的战士，而力量源自内心坚定的信念。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺客，近战 </span>
+						</div>
+  </div><div class="tooltip champion_tooltip">
+						<img src="http://pic.duowan.com/lol/1109/180008178761/180008225874.gif">
+						<h2 class="champion_name">泰隆</h2>
+
+						<h3 class="champion_title">刀锋之影</h3>
+						<p>"你只能在ducouteau家族看到瓦罗然大陆上最致命的三名用刀高手：我的父亲，我，泰伦。" &mdash;&mdash;卡特琳娜，不详之刃</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 近战,潜行, 刺客</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://pic.duowan.com/lol/1108/178647387266/178647406694.jpg">
+						<h2 class="champion_name">斯卡纳</h2>
+
+						<h3 class="champion_title">水晶先锋</h3>
+						<p>"人类尚未学会控制他们的魔法&mdash;&mdash;因为卡拉曼达已经变成了历史长河中的一条水晶疮疤（意指新地图水晶之痕）。" 
+</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 近战,打野, 战士</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://pic1.duowan.com/lol/1108/176391681614/176391685171.jpg">
+						<h2 class="champion_name">孙悟空</h2>
+
+						<h3 class="champion_title">齐天大圣</h3>
+
+						<p>"通往全知的第一步是发现自己的无知。"&mdash;&mdash;易大师的第一课 </p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 坦克, 战士</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://pic1.duowan.com/lol/1104/166448533784/175792428160.jpg">
+						<h2 class="champion_name">蕾欧娜</h2>
+
+						<h3 class="champion_title">曙光女神</h3>
+						<p>太阳的光芒笼罩着符文大陆，而其化身也势必如此。 - 蕾欧娜</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 坦克, 战士</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://pic3.duowan.com/lol/1104/166448533784/175792432633.jpg">
+						<h2 class="champion_name">约里克 </h2>
+						<h3 class="champion_title">掘墓者</h3>
+
+						<p>于生者而言，掘墓人的工作不可或缺，而在暗影岛，掘墓人的价值更不可估量</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 战士,近战,推线,复活,减速</span>
+						</div>
+						</div><div class="tooltip champion_tooltip">
+						<img src="http://lol.duowan.com/s/hero/rz.jpg">
+						<h2 class="champion_name">瑞兹</h2>
+                        
+
+						<h3 class="champion_title">流浪法师</h3>
+						<p>作为法师学院出来的两个讨厌鬼之一，瑞兹从来没合群过,在他7岁时，瑞兹就曾半夜偷入导师的住所，然后用一瓶电能药剂烧焦了校长引以为傲的...</p>
+						<div class="champion_tooltip_footer">
+						 <span class="champion_tooltip_tags">tags: 法师, 刺客, 禁锢, 爆发, 远程, 后期</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src="http://lol.duowan.com/s/hero/ktln.jpg">
+						<h2 class="champion_name">卡特琳娜</h2>
+						<h3 class="champion_title">不祥之刃</h3>
+
+						<p>在军国主义的诺克萨斯，女人的首要责任就是养育强壮的小孩，为参军的丈夫传宗接代，这是意料之中的事。但是有些女人却不把养育当作自己的天性，卡特琳娜便是其中之一...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 刺客,  爆发, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173890058944.gif">
+						<h2 class="champion_name">裟娜</h2>
+						<h3 class="champion_title">琴瑟仙女</h3>
+
+						<p>当娑娜尚在襁褓之时，她便被抛弃在艾欧尼亚的一家孤儿院的门前。因而她对自己的亲生父母毫无记忆...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 推线，辅助，治疗，刷钱，远程
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src="http://pic4.duowan.com/lol/1107/173890048848/173890255948.gif">
+						<h2 class="champion_name">斯维因</h2>
+						<h3 class="champion_title">策士统领</h3>
+
+						<p>有关斯维因的最早记载出现在诺克萨斯养老院一名医生的笔记上。据载，斯维因一瘸一拐地走进病房，没有叫喊也没有抱怨，他的右腿被折成两段，骨头破皮而出。他的肩膀上站着一只阴森的小鸟，仿佛是黏在他肩上似的...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 控制，终结，远程，法师，减速
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173890608802.gif">
+						<h2 class="champion_name">乐芙兰</h2>
+						<h3 class="champion_title">诡术妖姬</h3>
+
+                                              <p>每个城市都有你所不知的一面，正如每个人也都有着不为他人所知的一面。诺克萨斯，就是这么一个让人又爱又恨的地方...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 控制，沉默，法师，突进，</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173890714469.gif">
+						<h2 class="champion_name">艾瑞莉娅</h2>
+						<h3 class="champion_title">刀锋意志</h3>
+
+						<p>当绝望的艾欧尼亚人在普雷希典巨台准备投降时，艾瑞莉娅却高举起先父的传世之剑，誓死保卫家园直到兄长带领援兵归来...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺杀，爆发，后期，近战
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173890902009.gif">
+						<h2 class="champion_name">卡西奥佩娅</h2>
+						<h3 class="champion_title">魔蛇之拥</h3>
+
+						<p>当姐姐卡特琳娜成为家里最著名的一员时，杜-克卡奥家族已为诺克萨斯服务了很长时间。人们总说，杜-克卡奥将军比任何军人都幸运，因为他有两个女儿陪伴在旁。小女儿卡西奥佩娅虽然没有姐姐的超凡能力，却因其高贵和典雅的气质而同样为人熟知...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 眩晕，辅助，爆发，法师，远程，减速
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891021710.gif">
+						<h2 class="champion_name">凯特琳</h2>
+						<h3 class="champion_title">皮城女警</h3>
+
+						<p>皮特沃夫（皮城）被认为"进步之城"的主要原因是其极低的犯罪率。罗马不是一天建成的，皮特沃夫的低犯罪率也不是一来就有的。最初，皮特沃夫为了发展高科技，进口了很多珍贵资源，强盗和小偷们发现这块肥肉后便经常光顾这里。传说中的皮城女警凯特琳就此诞生...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刷钱，远程，新手，后期，物理
+
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891222376.gif">
+						<h2 class="champion_name">雷克顿</h2>
+						<h3 class="champion_title">荒漠屠夫</h3>
+
+						<p>雷克顿来自遥远一个的世界，和哥哥内瑟斯一样都是兽形种族的一份子，统治且保护着人类。雷克顿和内瑟斯一起管理秘藏着远古智慧和生死循环奥义的大图书馆...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 推进，刷钱，物理</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+				<img src="http://img.dwstatic.com/lol/1306/235155745723/1371200551407.png">
+				<h2 class="champion_name">卡尔玛</h2>
+				<h3 class="champion_title">天启者</h3>
+
+						<p>卡尔玛所的沉着冷静使她成为了村庄各种矛盾的调停者。她的导师总说："彼能起风，亦能止风...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 辅助，远程，法师</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891429814.gif">
+						<h2 class="champion_name">茂凯</h2>
+						<h3 class="champion_title">扭曲树精</h3>
+
+						<p>法师们在符文战争中施放扭曲魔法的能量给大自然造成了巨大的破坏。联盟的成立就是为了控制这种魔法的滥用，将其限制在正义之地。</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 推进，坦克，近战
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891523896.gif">
+						<h2 class="champion_name">嘉文四世</h2>
+						<h3 class="champion_title">德玛西亚皇子</h3>
+
+					<p>作为德玛西亚正统皇室光盾家族的成员，几个世纪以来他们都在与那些反对德玛西亚准则的敌人作战。据说每个光盾族人生来骨子里就有一股反诺克萨斯的情绪。嘉文四世也是如此。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士，近战，减速，团控，突进</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891609201.gif">
+						<h2 class="champion_name">魔腾</h2>
+						<h3 class="champion_title">永恒梦魇</h3>
+
+						<p>在魔腾出现之前，人们都认为日有所思才会夜有所梦，梦只是他们在睡觉时昙花一现的无意义影像。但当联盟召唤师受到一连串和梦相关事件的影响后，人们开始怀疑这个说法。有些人尖叫从梦中惊醒，终日惶惶不安；有些人无法入睡，黑夜的到来让他们渐渐失去心智...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺客，近战 </span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891698722.gif">
+						<h2 class="champion_name">李青</h2>
+						<h3 class="champion_title">盲僧</h3>
+
+						<p>年轻的李青立志要成为一名召唤师，他的决心和奉献精神是同龄人无可比拟的。李青的才华引起了当时的联盟高级议员&mdash;&mdash;瑞吉纳德-阿什拉姆的注意...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 刺客，近战 </span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891914477.gif">
+						<h2 class="champion_name">兰博</h2>
+						<h3 class="champion_title">机械公敌</h3>
+
+    <p>即便是在身材矮小的约德尔人中，兰波也只算矮个。所以他一直以来受人欺负。迫不得已，兰波变得比同辈更加好斗和机警。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 推线 法师 近战
+</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173891998879.gif">
+						<h2 class="champion_name">薇恩</h2>
+						<h3 class="champion_title">暗夜猎手</h3>
+
+	<p>这个世界并不总像人们想象的那么美好。符文大陆上依旧有许多人通过最黑暗的方式修习魔法，被那些暗流涌动的黑暗力量腐蚀。夏娜-薇恩深知这一点。</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 物理, 远程, 隐身</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_55">
+						<img src=" http://pic.duowan.com/lol/1107/173890048848/173892078905.gif">
+						<h2 class="champion_name">奥莉安娜</h2>
+						<h3 class="champion_title">发条魔灵</h3>
+
+						<p>住在在皮尔特沃夫corinreveck有个女儿名为奥莉安娜，科林爱她胜过世上一切。虽然奥莉安娜拥有惊人的舞蹈天赋，但她却为联盟的英雄着迷...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 远程 法师 打钱 减速</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_31">
+						<img src="http://lol.duowan.com/s/hero/kjs.jpg">
+						<h2 class="champion_name">科'加斯</h2>
+						<h3 class="champion_title">虚空恐惧</h3>
+						<p>在各个维度各个世界之间，有这么一个地方。对有些人来说，这里是外域；对另一些人来说，则是未知空间；然而对更多的人而言，这里是the void...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 法师, 控场, 减速, 沉默, 治疗, 爆发, 顽强, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_20">
+						<img src="http://lol.duowan.com/s/hero/nn.jpg">
+						<h2 class="champion_name">努努</h2>
+						<h3 class="champion_title">雪人骑士</h3>
+						<p>瓦罗然极东之地被刺骨寒冰所覆盖，在漫长的冬季里，当地居民玩一个奇怪的游戏。他们弄醒一窝冬眠的雪人，然后挨个跳到雪人背上，比赛谁能骑乘...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 肉盾, 法师, 减速, 加速, 辅助, 打钱, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_32">
+						<img src="http://lol.duowan.com/s/hero/amm.jpg">
+						<h2 class="champion_name">阿木木</h2>
+						<h3 class="champion_title">殇之木乃伊</h3>
+			<p>阿木木是英雄联盟世界里最古老的保卫者英雄之一，但他对加入联盟前的生活仍一无所知。阿木木唯一记得的是自己在恕瑞玛沙漠的一座金字塔内醒来。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 法师, 控场,  眩晕, 近战, 爆发</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_45">
+
+						<img src="http://lol.duowan.com/s/hero/wj.jpg">
+						<h2 class="champion_name">维迦</h2>
+						<h3 class="champion_title">邪恶小法师</h3>
+
+	<p>约德尔人在人们心中大多不能跟可怕挂钩。这个随和矮小的种族虽然有点狂野，但某种程度上还是容易亲近的。不过就在最近，有一个约德尔人变得非常坏……</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 眩晕, 推塔, 打钱, 爆发, 远程</span>
+						</div>
+
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_27">
+						<img src="http://lol.duowan.com/s/hero/xjd.jpg">
+
+						<h2 class="champion_name">辛吉德</h2>
+						<h3 class="champion_title">炼金术士</h3>
+						<p>在符文之战里有一个转折点，而我们只知道它被称为"审判时"。那天和平常一样，大陆上充满了愤怒的战斗，人们为不同的信仰战斗，然后死去。但在那...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 陷阱, 减速, 加速, 推塔, 近战, 顽强</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_23">
+						<img src="http://lol.duowan.com/s/hero/tdme.jpg">
+						<h2 class="champion_name">泰达米尔</h2>
+						<h3 class="champion_title">蛮族之王</h3>
+
+						<p>这个世界上有那么一群选择不在瓦洛兰城邦生活的人，反之，他们选择区小村庄或者是游牧部落生活。在这些未经开拓的地方生活尽管存在一定的危险，但是同样也能享受到远离符文之地法规限制的自由...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士,  减速, 治疗, 逃生, 后期, 近战</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_36">
+						<img src="http://lol.duowan.com/s/hero/mdys.jpg">
+						<h2 class="champion_name">蒙多</h2>
+						<h3 class="champion_title">祖安狂人</h3>
+						<p>据说蒙多医生是出生在祖安的一个无情的男子，他有无法抑制的冲动去通过实验制造痛苦。在他五岁的时候，他周围邻居的宠物经常失踪；在他十岁的时候...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 战士, 控场, 减速, 治疗, 打钱, 顽强, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_41">
+						<img src="http://lol.duowan.com/s/hero/plk.jpg">
+						<h2 class="champion_name">普朗克</h2>
+						<h3 class="champion_title">海洋之灾</h3>
+						<p>普朗克的父亲是令人闻风丧胆的海盗船长"魅影文森特"，也是整个蓝焰岛上最富有、最恐怖的海盗之一。也许有人会认为普朗克会如温室的花朵一般被宠坏...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 战士, 控场, 辅助, 加速, 治疗, 打钱, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_54">
+						<img src="http://lol.duowan.com/s/hero/mft.jpg">
+						<h2 class="champion_name">墨菲特</h2>
+						<h3 class="champion_title">熔岩巨兽</h3>
+						<p>曾经有一个完全和谐的世界，在那里，一切都是这个整个世界的一部分。巨石是一切事物的本原，他们的外来居民则是一个个独立的部分。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士, 刺客, 顽强, 后期, 近战</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_15">
+
+						<img src="http://lol.duowan.com/s/hero/xwe.jpg">
+						<h2 class="champion_name">希维尔</h2>
+						<h3 class="champion_title">战争女神</h3>
+						<p>美丽而致命的希维尔在她的雇佣兵生涯中赢得了无数头衔，而最近她一直是" 诺克苏斯的战争女神"。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士, 辅助, 加速, 打钱, 推塔, 后期, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_9">
+						<img src="http://lol.duowan.com/s/hero/fdtk.jpg">
+
+						<h2 class="champion_name">费德提克</h2>
+						<h3 class="champion_title">末日使者</h3>
+						<p>20多年来费德提克独自站在战争学院最东边的召唤室。只有他双眼中发出的燃烧搬的绿色火焰才能刺穿他黑暗的、布满尘埃的家。末日使者就是在这里无声地守着。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 恐惧, 沉默, 治疗, 爆发, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_10">
+						<img src="http://lol.duowan.com/s/hero/ke.jpg">
+						<h2 class="champion_name">凯尔</h2>
+						<h3 class="champion_title">审判天使</h3>
+
+						<p>许多年前，遥远的天国之中，崇尚自由的炎之天使长凯尔挑战了古板的最高指令.在神圣天国里，命令需要绝对服从，任何质疑都等于背叛。凯尔厌倦了毫无...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 战士, 减速, 辅助, 加速, 推塔, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_34">
+						<img src="http://lol.duowan.com/s/hero/anwy.jpg">
+						<h2 class="champion_name">艾尼维亚</h2>
+						<h3 class="champion_title">冰晶凤凰</h3>
+						<p>大部分的传说里，凤凰都是从灰烬中重生的火鸟。但很少有人知道，凤凰是一种元素生物，由各自世界里永恒的精粹形成。艾尼维亚来自这样一个世界&mdash;&mdash;...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 控场, 辅助, 减速, 陷阱, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_17">
+						<img src="http://lol.duowan.com/s/hero/tm.jpg">
+
+						<h2 class="champion_name">提莫</h2>
+						<h3 class="champion_title">迅捷斥候</h3>
+						<p>作为班德尔城的斥候队长，提莫是祖国尤德尔最前方的防守者。在斥候队长之外，他还要筹划肥皂盒德比，传授新手斥候誓约，裁定年度大胃王比赛&mdash;...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺客, 侦查, 控场, 加速, 辅助, 远程, 打钱</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_22">
+						<img src="http://lol.duowan.com/s/hero/ax.jpg">
+						<h2 class="champion_name">艾希</h2>
+						<h3 class="champion_title">寒冰射手</h3>
+						<p>弗雷尔卓德美女艾希是英雄联盟召唤师长期以来的最爱之一。作为阿瓦罗萨的直系后代，艾希是传奇三姐妹之一。她们各自宣称统治着居住在瓦洛兰大陆北部冻苔原地带的散乱部落。艾希继承了祖先精通的箭术，因此也继承了阿瓦罗萨“寒冰射手”的称号。</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 刺客, 眩晕, 减速, 打钱, 后期, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_1">
+						<img src="http://lol.duowan.com/s/hero/an.jpg">
+						<h2 class="champion_name">安妮</h2>
+						<h3 class="champion_title">黑暗之女</h3>
+						<p>她的母亲是一位灰色魔女，她的父亲是一名神秘的术士，这个孩子的血液里流淌着惊人的秘法能量。她两岁时就用魔法驯服了一头森林里的凶猛暗影熊，将...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 眩晕, 推塔, 打钱, 爆发, 宠物, 远程</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_18">
+
+						<img src="http://lol.duowan.com/s/hero/cstn.jpg">
+						<h2 class="champion_name">崔丝塔娜</h2>
+						<h3 class="champion_title">麦林炮手</h3>
+						<p>麦格林突击队一直是班德尔城里的一个传奇。他们拥有横跨数世纪的悠久历史，现在他们仍然还在约德尔人的军队里服役。他们以冷酷英勇而闻名于世，即使是班德尔城里面的勇士们也对他们敬畏有加...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士, 减速, 推塔, 打钱, 后期, 陷阱, 远程</span>
+						</div>
+
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_24">
+						<img src="http://lol.duowan.com/s/hero/jks.jpg">
+
+						<h2 class="champion_name">贾克斯</h2>
+						<h3 class="champion_title">武器大师</h3>
+						<p>除了贾克斯，很少有英雄是通过加入联盟后的行动来衡量自己。贾克斯是目前战争学院最多产的联赛战士。在加入联盟之前，贾克斯只是个平凡的雇佣士兵...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士, 刺客, 眩晕, 顽强, 后期, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_11">
+						<img src="http://lol.duowan.com/s/hero/y.jpg">
+						<h2 class="champion_name">易</h2>
+						<h3 class="champion_title">无极剑圣</h3>
+
+						<p>无极武馆是个非常神秘的存在，除了本门弟子其他人根本找不到，传言武馆位于沙漠深处武馆有四位大师镇馆，分别以金银铜铅四条龙命名，他们从不在同时...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士, 打钱, 推塔, 加速, 后期, 治疗</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_42">
+						<img src="http://lol.duowan.com/s/hero/kq.jpg">
+						<h2 class="champion_name">库奇</h2>
+                        
+						<h3 class="champion_title">英勇投弹手</h3>
+						<p>库奇是"尖啸之蛇"里最具盛名的，不单因为他无与伦比的勇气，还有他面对威胁时冷静的头脑。在加入联盟之前，库奇也效力过其他组织，他经常主动接受任务，深入敌后，在危险地带收集情报或传递信息...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 推塔, 打钱, 爆发, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_12">
+						<img src="http://lol.duowan.com/s/hero/alst.jpg">
+						<h2 class="champion_name">阿利斯塔</h2>
+						<h3 class="champion_title">牛头酋长</h3>
+						<p>作为氏族的最后幸存者，阿利斯塔在保护家园抵抗强大入侵者时被俘，成为一名奴隶，被迫推动巨大的滑轮升降矿工。  在这无尽的痛苦生活里，他唯一的安...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 肉盾, 辅助, 治疗, 眩晕, 陷阱, 推塔, 顽强, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_53">
+						<img src="http://lol.duowan.com/s/hero/blc.jpg">
+						<h2 class="champion_name">布里茨</h2>
+						<h3 class="champion_title">蒸汽机器人</h3>
+						<p>祖安是个被科技和魔法双重扭曲的城市。没有节制的实验毁坏了这座城市。不过在魔法和科技的双重作用下，这里也出现了不少奇观，比如蒸汽机器人就是...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 辅助, 眩晕,  近战</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_16">
+
+						<img src="http://lol.duowan.com/s/hero/slk.jpg">
+						<h2 class="champion_name">索拉卡</h2>
+						<h3 class="champion_title">众星之子</h3>
+						<p>在在符文之战中人中，索拉卡被称为众星之子。作为艾欧尼亚第一位高阶女祭司，她是艾欧尼亚的实际统治者，在符文之战中誓言保卫他们的信仰。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 辅助, 治疗, 推塔, 打钱,, 远程</span>
+						</div>
+
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_75">
+						<img src="http://lol.duowan.com/s/hero/nss.jpg">
+
+						<h2 class="champion_name">内瑟斯</h2>
+						<h3 class="champion_title">沙漠死神</h3>
+						<p>这个被称为内瑟斯的神秘生物从遥远的世界来到联盟，并且是庞大博学的沙漠帝国的一部分。在那里内瑟斯备受尊敬，同时学富五车的他被任命为大图书馆的守护者...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾,  减速, 推塔, 近战,</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_19">
+						<img src="http://lol.duowan.com/s/hero/wlk.jpg">
+						<h2 class="champion_name">沃里克</h2>
+						<h3 class="champion_title">嗜血猎手</h3>
+
+						<p>沃里克曾经是名野蛮的雇佣兵，他被祖安的炼金术士训练成为化学武器工程师。在爱奥尼亚一座城堡的防御战里，当己方部队都被消灭后，沃里克逃走了。...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士, 眩晕, 加速, 治疗, 顽强, 肉盾, 近战, 辅助</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_25">
+						<img src="http://lol.duowan.com/s/hero/mgn.jpg">
+						<h2 class="champion_name">莫甘娜</h2>
+
+						<h3 class="champion_title">堕落天使</h3>
+						<p>莫甘娜很小就随姐姐凯勒加入了审判者，姐妹俩迅速地脱颖而出，残酷的训练也将她们的战斗技能磨练到最高水准。虽然莫甘娜和凯勒是姐妹和亲密的朋友...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 辅助,  眩晕, 推塔, 打钱, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_33">
+						<img src="http://lol.duowan.com/s/hero/lms.jpg">
+						<h2 class="champion_name">拉莫斯</h2>
+						<h3 class="champion_title">披甲龙龟</h3>
+						<p>瘟疫之地上蔓延的危险魔法影响了该地区的所有生灵，拉莫斯就是一个例子。没人知道来自shurima沙漠的龙龟怎么能毫发无损的穿越kumungu丛林，但拉...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 肉盾, 眩晕, 减速, 推塔, 爆发, 顽强, 近战</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_38">
+						<img src="http://lol.duowan.com/s/hero/ksd.jpg">
+						<h2 class="champion_name">卡萨丁</h2>
+						<h3 class="champion_title">虚空行者</h3>
+						<p>一个存在于各个世界之间的地方。对有些知道它存在的人来说是外域，而对于其他的人它则是一片未知之地。大部分人称其为做无尽虚空。不要被它的名...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 减速, 打钱, 近战, 后期, 战士</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_14">
+
+						<img src="http://lol.duowan.com/s/hero/se.jpg">
+						<h2 class="champion_name">赛恩</h2>
+						<h3 class="champion_title">亡灵勇士</h3>
+						<p>德玛西亚和诺克萨斯的战争历史扩散到了瓦罗然的城市。这场冲突最新的产物是诺克苏斯的残暴战士赛恩。赛恩被诺克苏斯当作人形攻城武器使用，在...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 法师, 爆发, 顽强, 治疗, 近战, 眩晕</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_44">
+						<img src="http://lol.duowan.com/s/hero/tlk.jpg">
+
+						<h2 class="champion_name">塔里克</h2>
+						<h3 class="champion_title">宝石骑士</h3>
+						<p>有一种古老的魔法，早已被人们所遗弃。这是有关大地之力的魔法，也是有关水晶和宝石共鸣的魔法。塔里克的父亲是一个遥远城镇中的医者，塔里克...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 肉盾, 陷阱, 减速, 加速, 推塔, 近战, 顽强</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_40">
+						<img src="http://lol.duowan.com/s/hero/jn.jpg">
+						<h2 class="champion_name">迦娜</h2>
+						<h3 class="champion_title">风暴之怒</h3>
+
+						<p>有这么一些女巫，将自己奉献给自然的原始力量。有一个孤儿迦娜，成长于混乱的祖安，艰难的在街道上讨生活。祖安狂暴的魔法是她眼中最初也是最迷人的存在，迦娜意识到她可以用魔法来保护自己...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 辅助, 控场, 减速, 加速, 治疗,  远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_26">
+						<img src="http://lol.duowan.com/s/hero/jl.jpg">
+						<h2 class="champion_name">基兰</h2>
+						<h3 class="champion_title">时光守护者</h3>
+						<p>从干枯破裂的河床上升起的是一座大摆钟一样的塔。塔没有门也没有其他入口，固若金汤，无懈可击，无法通过攀爬或飞行进入。塔外面方圆百里寸草...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 辅助, 减速, 加速, 推塔, 打钱, 逃生, 爆发, 远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_4">
+						<img src="http://lol.duowan.com/s/hero/cst.jpg">
+						<h2 class="champion_name">崔斯特</h2>
+						<h3 class="champion_title">卡牌大师</h3>
+						<p>蛇纹石河两岸是一个与世隔绝的吉普赛聚居地。任何一天你都会看见一队明轮船在河面急流中上下穿行。虽然宿营地一直在变动，但部族却非常稳定团...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 刺客, 辅助, 眩晕, 减速, 推塔, 传送, 逃生, 远程, 后期</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_28">
+
+				<img src="http://lol.duowan.com/s/hero/yfl.jpg">
+
+				<h2 class="champion_name">伊芙琳</h2>
+
+				<h3 class="champion_title">寡妇制造者</h3>
+
+				<p>伊芙琳的来历至今仍是个谜，不过第一眼看上去她不太像个人类。有人猜测那是吸血鬼幼年时期的温和外表。也有人认为她在战场上爆发的野性暗示了。</p>
+
+				<div class="champion_tooltip_footer">
+
+				<span class="champion_tooltip_tags">tags: 法师, 刺客,  隐形, 加速, 爆发, 近战</span>
+
+				</div>
+
+				</div><div class="tooltip champion_tooltip" id="champion_tooltip_30">
+
+						<img src="http://lol.duowan.com/s/hero/kess.jpg">
+
+						<h2 class="champion_name">卡尔萨斯</h2>
+						<h3 class="champion_title">死亡颂唱者</h3>
+						<p>在符文之战期间，巨大的魔法能量被释放出来，给瓦罗然大陆留下了无数伤痕。很多偏远地区被残余的魔法持续扭曲，成为人迹罕至的地方，嚎叫沼泽...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 法师, 减速, 控场, 打钱, 远程, 复活</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_35">
+						<img src="http://lol.duowan.com/s/hero/sk.jpg">
+						<h2 class="champion_name">萨科</h2>
+						<h3 class="champion_title">恶魔小丑</h3>
+
+						<p>从没有人会把死亡当作儿戏，除非你是萨科-这个瓦罗然大陆上第一个嗜杀的喜剧演员。他总是变着戏法折磨无辜的人，直到他们死去后他才放声大笑...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 打钱、刺客、爆发、隐形、减速、战士</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_74">
+						<img src="http://lol.duowan.com/s/hero/hmdg.jpg">
+						<h2 class="champion_name">黑默丁格</h2>
+						<h3 class="champion_title">大发明家</h3>
+						<p>在班德勒郊外看到yordle一族是很不寻常的事情，但是科技的吸引对于黑默丁格来说无法抵挡的。科学院召唤他来效力，大胆的启用他.</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 推塔、眩晕、打钱、宠物、爆发、远程、法师</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_84">
+						<img src="http://lol.duowan.com/s/hero/akl.jpg">
+						<h2 class="champion_name">阿卡丽</h2>
+						<h3 class="champion_title">暗影之拳</h3>
+						<p>艾欧尼亚群岛有一个古老的组织，他们将其一生奉献给世界平衡。秩序，混乱，光明，黑暗 &mdash;&mdash; 所有这一切都必须完美平衡的存在，这就是宇宙之道...</p>
+						<div class="champion_tooltip_footer">
+
+						<span class="champion_tooltip_tags">tags: 打钱、刺杀、潜行、近战、爆发</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_77">
+						<img src="http://lol.duowan.com/s/hero/wde.jpg">
+						<h2 class="champion_name">乌迪尔</h2>
+						<h3 class="champion_title">兽灵行者</h3>
+						<p>在艾欧尼亚，有一群隐修者悉心钻研着瓦洛兰的至深奥秘，探索着灵魂的最深处。他们中的一些精英是文明与和谐的忠实拥护者，然而总有人另辟蹊径...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士、控制、晕眩、加速、近战</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_86">
+
+						<img src="http://lol.duowan.com/s/hero/gl.jpg">
+						<h2 class="champion_name">盖伦</h2>
+						<h3 class="champion_title">德玛西亚之力</h3>
+						<p>在瓦洛兰大陆，虽然人们对德玛西亚的军纪存在争议，但是相同点是所有人都尊敬它。平民和士兵都严格遵守着"零容忍"的准则。这意味着在战斗中徳玛西亚军队永远不会找借口托辞、逃跑、或者投降...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士、打钱、近战、后期、沉默</span>
+						</div>
+
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_85">
+						<img src="http://lol.duowan.com/s/hero/kn.jpg">
+						<h2 class="champion_name">凯南</h2>
+						<h3 class="champion_title">狂暴之心</h3>
+
+						<p>艾欧尼亚群岛有一个古老的组织，他们将其一生奉献给世界平衡。秩序，混乱，光明，黑暗 &mdash;&mdash; 所有这一切都必须完美平衡的存在，这就是宇宙之道...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刺客、控制、加速、打钱、远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_96">
+						<img src="http://lol.duowan.com/s/hero/kgm.jpg">
+						<h2 class="champion_name">克格'莫</h2>
+						<h3 class="champion_title">深渊巨口</h3>
+
+						<p>符文之地迷人的色彩和香气让克格'莫沉醉，他用自己唯一知道的方法探寻这个奇怪世界里的水果，那就是吞食它们。</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 控制、推线、终结、减速、远程、打钱</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_90">
+						<img src="http://lol.duowan.com/s/hero/mezh.jpg">
+						<h2 class="champion_name">玛尔扎哈</h2>
+						<h3 class="champion_title">虚空先知</h3>
+			<p>大多数人在恕瑞玛令人刺眼的阳光下变得疯狂，但是当夜幕降临的时候玛尔扎哈也放下了自己的理智。自从他出生之时就受到了先知的祝福而拥有了未卜先知的能力。</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 控制、刺客、刷钱、远程、法师、宠物</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_82">
+						<img src="http://lol.duowan.com/s/hero/mdks.jpg">
+						<h2 class="champion_name">莫德凯撒</h2>
+						<h3 class="champion_title">金属大师</h3>
+						<p>某天，从暗影岛来了一个器宇不凡的家伙。他身高八英尺，深深的隐藏在锋利的盔甲之内，人们只知道他名叫莫德凯撒。从未有人见过他藏在盔甲之中的真面目...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士、坦克、推线、坚韧、近战</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_76">
+						<img src="http://lol.duowan.com/s/hero/ndl.jpg">
+
+						<h2 class="champion_name">奈德丽</h2>
+						<h3 class="champion_title">狂野女猎手</h3>
+						<p>超级壁垒的南部是一片被诅咒的凶险之地，因此人烟稀少，而英雄更是凤毛麟角。那里的大部分地区仍然残留着上次符文战争留下的创伤，特别是神秘的库莽古森林...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags:辅助、加速、近战、远程、治疗、逃生、侦查</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_81">
+						<img src="http://lol.duowan.com/s/hero/ezre.jpg">
+						<h2 class="champion_name">伊泽瑞尔</h2>
+						<h3 class="champion_title">探险家</h3>
+
+						<p>伊泽瑞尔的血液中流淌着与生俱来的魔法天赋。与此同时，他热爱流浪探险。伊泽瑞尔进入学校后，有望成长为熟练的科技魔法师，但他很快就厌倦了学校的魔法学习...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags:物理, 刷钱、法师、后期、远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_79">
+						<img src="http://lol.duowan.com/s/hero/gljs.jpg">
+						<h2 class="champion_name">古拉加斯</h2>
+						<h3 class="champion_title">酒桶</h3>
+						<p>超级堡垒山麓孕育着瓦罗然大陆最坚毅的居民，只有不屈不挠并吃苦耐劳的人才能在符文之地最恶劣的环境下生存...</p>
+
+
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags:坦克、辅助、近战、推线、治疗、坚韧</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_2">
+						<img src="http://lol.duowan.com/s/hero/alf.jpg">
+						<h2 class="champion_name">奥拉夫</h2>
+						<h3 class="champion_title">狂战士</h3>
+						<p>在瓦罗然势力范围以外的未知大陆，奥拉夫出生于一个历史悠久、与众不同的勇士世家。他们自称为狂战士，将自己的怒火导入至战斗之中，释放出狂野的愤怒...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags:战士、后期、近战、减速、坚韧</span>
+
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_80">
+						<img src="http://lol.duowan.com/s/hero/ps.jpg">
+
+						<h2 class="champion_name">潘森</h2>
+						<h3 class="champion_title">战争之王</h3>
+						<p>在巨石峰巅的云端之上，居住着一个叫斯坦帕的部落，他们崇拜战争，视其为第二艺术。他们还记得符文之地发生的符文之战，也知道英雄联盟对部落崛起长久以来的压制...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags:战士、后期、近战、晕眩、坚韧</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_78">
+						<img src="http://lol.duowan.com/s/hero/bb.jpg">
+						<h2 class="champion_name">波比</h2>
+						<h3 class="champion_title">钢铁大使</h3>
+
+						<p>当其他的约德尔年轻人在载歌载舞，互抛花环的时候，波比还在她父亲的铠甲店里辛勤的工作，双手长满了老茧，身上沾满了油渍，她的父亲...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士、晕眩、近战、后期、坚韧</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_98">
+						<img src="http://lol.duowan.com/s/hero/s.jpg">
+						<h2 class="champion_name">慎</h2>
+						<h3 class="champion_title">暮光之眼</h3>
+						<p>艾欧尼亚岛上有一个上古教派，致力于维护均衡。规则与混乱、光明与黑暗&mdash;&mdash;万物必须和谐共存，这就是宇宙的真理。这个教派名为均衡教派，而该教派维护世界均衡的神圣使命则由三个暗影战士来执行...</p>
+
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士、坦克、辅助、嘲讽、近战、忍者</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_5">
+						<img src="http://lol.duowan.com/s/hero/zx.jpg">
+						<h2 class="champion_name">赵信</h2>
+						<h3 class="champion_title">德邦总管</h3>
+						<p>每当德玛西亚的国王嘉文三世在皇宫顶部那熠熠生辉的大理石阳台上发表他那激情澎湃的演讲之时，赵信都会侍立于他的身旁...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 战士、控制、突进、减速、近战、推线、</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_5">
+						<img src="http://lol.duowan.com/s/hero/fljme.jpg">
+						<h2 class="champion_name">弗拉基米尔</h2>
+						<h3 class="champion_title">猩红收割者</h3>
+						<p>在诺克萨斯和暴风平原之间的群山中，坐落着一个寺院。这里守护着许多秘密。寺院里面堆了许多不小心闯入的旅行者尸体...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 坦克、法师、远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_5">
+						<img src="http://lol.duowan.com/s/hero/jla.jpg">
+						<h2 class="champion_name">加里奥</h2>
+						<h3 class="champion_title">哨兵之殇</h3>
+						<p>在很久之前，联盟并没有对法师创造人工生命进行任何监管，然而，现在已经彻底禁止了向傀儡灌输灵魂这样在工匠中并不罕见的活动。但是还有这样一位充满幻想德玛西亚工匠-杜兰德.</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 坦克、法师、辅助、打钱</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_5">
+						<img src="http://lol.duowan.com/s/hero/ejt.jpg">
+						<h2 class="champion_name">厄加特</h2>
+						<h3 class="champion_title">首领之傲</h3>
+						<p>联盟里有很多的勇士，有些人是因为自己的天生神力而著名，有些充满了狡猾与诡计，或者是对于武器的专精，而其余的则只是简单的拒绝死亡。乌尔加特...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 刷钱、刺杀、控制、远程</span>
+						</div>
+						</div><div class="tooltip champion_tooltip" id="champion_tooltip_5">
+						<img src="http://img.dwstatic.com/lol/1306/235058999669/1371103804008.jpg">
+						<h2 class="champion_name">厄运小姐</h2>
+						<h3 class="champion_title">赏金猎人</h3>
+						<p>对于勇敢面对符文之地严酷海洋的人，能拥有一艘属于自己的船和船员，就已是个不错的成就。备受尊敬的赏金猎人莎拉，在她16岁生日时就已经完成了这个目标...</p>
+						<div class="champion_tooltip_footer">
+						<span class="champion_tooltip_tags">tags: 加速、减速、刷钱、推线、远程</span>
+						</div>
+						</div></body></html>

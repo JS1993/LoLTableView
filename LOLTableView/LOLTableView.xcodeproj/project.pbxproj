@@ -16,6 +16,8 @@
 		CF2692281CB72FA4005283FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2692261CB72FA4005283FA /* LaunchScreen.storyboard */; };
 		CF2692331CB72FA4005283FA /* LOLTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2692321CB72FA4005283FA /* LOLTableViewTests.m */; };
 		CF26923E1CB72FA4005283FA /* LOLTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26923D1CB72FA4005283FA /* LOLTableViewUITests.m */; };
+		CF26924C1CB730D7005283FA /* heros.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF26924B1CB730D7005283FA /* heros.plist */; };
+		CF26924F1CB731CF005283FA /* JSHeros.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26924E1CB731CF005283FA /* JSHeros.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		CF2692391CB72FA4005283FA /* LOLTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOLTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF26923D1CB72FA4005283FA /* LOLTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOLTableViewUITests.m; sourceTree = "<group>"; };
 		CF26923F1CB72FA4005283FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF26924B1CB730D7005283FA /* heros.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heros.plist; sourceTree = "<group>"; };
+		CF26924D1CB731CF005283FA /* JSHeros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSHeros.h; sourceTree = "<group>"; };
+		CF26924E1CB731CF005283FA /* JSHeros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSHeros.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,8 @@
 				CF2692291CB72FA4005283FA /* Info.plist */,
 				CF2692211CB72FA4005283FA /* LOLTableView.xcdatamodeld */,
 				CF2692151CB72FA4005283FA /* Supporting Files */,
+				CF26924D1CB731CF005283FA /* JSHeros.h */,
+				CF26924E1CB731CF005283FA /* JSHeros.m */,
 			);
 			path = LOLTableView;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 		CF2692151CB72FA4005283FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF26924B1CB730D7005283FA /* heros.plist */,
 				CF2692161CB72FA4005283FA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -251,6 +259,7 @@
 			files = (
 				CF2692281CB72FA4005283FA /* LaunchScreen.storyboard in Resources */,
 				CF2692251CB72FA4005283FA /* Assets.xcassets in Resources */,
+				CF26924C1CB730D7005283FA /* heros.plist in Resources */,
 				CF2692201CB72FA4005283FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +288,7 @@
 				CF26921D1CB72FA4005283FA /* ViewController.m in Sources */,
 				CF26921A1CB72FA4005283FA /* AppDelegate.m in Sources */,
 				CF2692171CB72FA4005283FA /* main.m in Sources */,
+				CF26924F1CB731CF005283FA /* JSHeros.m in Sources */,
 				CF2692231CB72FA4005283FA /* LOLTableView.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +513,7 @@
 				CF2692441CB72FA4005283FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF2692451CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +522,7 @@
 				CF2692471CB72FA4005283FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF2692481CB72FA4005283FA /* Build configuration list for PBXNativeTarget "LOLTableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +531,7 @@
 				CF26924A1CB72FA4005283FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
